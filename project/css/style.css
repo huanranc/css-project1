@@ -1,0 +1,181 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: Microsoft YaHei; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+.header {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 310px;
+  background: url(../images/huntington.jpg) no-repeat;
+  background-position: 0 50%;
+  background-size: cover; }
+  .header .website-title {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%; }
+    .header .website-title .website-title-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 80%;
+      transform: translate(-50%, -50%);
+      /*border:1px solid #000000;*/ }
+      .header .website-title .website-title-content img {
+        float: left;
+        max-width: 146px;
+        max-height: 146px; }
+      .header .website-title .website-title-content .website-title-t {
+        float: left;
+        width: 80%;
+        margin: 30px auto;
+        padding-left: 30px;
+        /*border:1px solid #000000;*/ }
+        .header .website-title .website-title-content .website-title-t h1 {
+          padding: 0;
+          margin: 0;
+          font-size: 4em;
+          color: #fff; }
+        .header .website-title .website-title-content .website-title-t p {
+          padding: 0;
+          margin: 0;
+          font-size: 3em;
+          color: #93b7ac; }
+  .header .website-link {
+    position: relative;
+    float: left;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%; }
+    .header .website-link .website-link-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 90%;
+      height: 20%;
+      box-sizing: border-box;
+      transform: translate(-50%, -50%); }
+      .header .website-link .website-link-content .link-01 {
+        float: left;
+        height: 100%;
+        width: 15%;
+        box-sizing: border-box;
+        border: 1px solid red; }
+      .header .website-link .website-link-content .link-02 {
+        float: left;
+        height: 100%;
+        width: 65%;
+        box-sizing: border-box;
+        border: 1px solid red; }
+      .header .website-link .website-link-content .link-03 {
+        float: left;
+        height: 100%;
+        width: 15%;
+        box-sizing: border-box;
+        border: 1px solid red; }
+
+.header:before,
+.header:after {
+  content: "";
+  display: table; }
+
+.header:after {
+  clear: both; }
+
+.contain {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; }
+  .contain .main {
+    float: left;
+    box-sizing: border-box;
+    width: 70%;
+    padding: 3% 8%; }
+    .contain .main p {
+      font-size: 2em;
+      padding: 10px 0px;
+      line-height: 2em; }
+    .contain .main .article h1 {
+      font-size: 2.5em;
+      font-weight: normal;
+      font-family: Tahoma; }
+  .contain .message {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 70%;
+    box-sizing: border-box;
+    width: 30%;
+    background: #e4eee8; }
+    .contain .message ul {
+      list-style: none;
+      padding: 5% 15% 10%; }
+    .contain .message li {
+      box-sizing: border-box;
+      padding: 10% 0;
+      height: 9em;
+      border-bottom: 1px solid #d9e3dc; }
+    .contain .message a {
+      display: block;
+      text-decoration: none; }
+    .contain .message li a:first-child {
+      color: #6e8182;
+      font-size: 2em;
+      font-weight: normal;
+      font-family: Tahoma; }
+    .contain .message li a:nth-child(2) {
+      color: #646c5a;
+      font-size: 1.5em; }
+
+.contain:before,
+.contain:after {
+  content: "";
+  display: table; }
+
+.contain:after {
+  clear: both; }
+
+.main-02 {
+  background: #bed6c7 url(../images/bamboo.png) no-repeat fixed;
+  background-size: cover; }
+  .main-02 .message {
+    background: none; }
+
+.adv-message {
+  position: relative;
+  width: 100%;
+  height: 310px;
+  background: url(../images/koi.jpg) no-repeat;
+  background-size: cover;
+  background-position: 50% 45%;
+  font-size: 4em;
+  text-align: center; }
+  .adv-message .adv-contain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%); }
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  min-height: 180px;
+  background: #134347; }
+  .footer .footer-contain {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid red; }

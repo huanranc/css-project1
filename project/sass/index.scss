@@ -1,0 +1,212 @@
+body{
+  padding: 0;
+  margin: 0;
+  font-size: 62.5%;
+  font-family: Microsoft YaHei;
+}
+p{
+  padding: 0;
+  margin: 0;
+}
+
+.header{
+  position: relative;
+  box-sizing: border-box;
+  width: $header-width;
+  height: $header-height;
+  background: url(../images/huntington.jpg) no-repeat;
+  background-position:0 50%;
+  background-size:cover;
+  .website-title{
+    position: relative;
+    float:left;
+    box-sizing: border-box;
+    width: $header-left;
+    height: $height;
+    .website-title-content{
+      position:absolute;
+      top:50%;
+      left: 50%;
+      width: $website-title-content-w;
+      transform:translate(-50%,-50%);
+      /*border:1px solid #000000;*/
+      img{
+        float:left;
+        max-width: 146px;
+        max-height: 146px;
+      }
+      .website-title-t{
+        float: left;
+        width: 80%;
+        margin: 30px auto;
+        padding-left:30px;
+        /*border:1px solid #000000;*/
+        h1{
+          padding: 0;
+          margin: 0;
+          font-size: 4em;
+          color:#fff;
+        }
+        p{
+          padding: 0;
+          margin: 0;
+          font-size: 3em;
+          color:#93b7ac;
+        }
+      }
+    }
+  }
+  .website-link{
+    position:relative;
+    float:left;
+    box-sizing: border-box;
+    width: $header-right;
+    height: $height;
+    .website-link-content{
+      position:absolute;
+      top:50%;
+      left: 50%;
+      width: $website-link-content-w;
+      height: $website-link-content-h;
+      box-sizing: border-box;
+      transform:translate(-50%,-50%);
+      .link-01{
+        float: left;
+        height: $height;
+        width: $link--lf-w;
+        box-sizing: border-box;
+        border:1px solid red;
+      }
+       .link-02{
+        float: left;
+        height: $height;
+        width: $link-m-w;
+        box-sizing: border-box;
+        border:1px solid red;
+      }
+      .link-03{
+        float: left;
+        height: $height;
+        width: $link--lf-w;
+        box-sizing: border-box;
+        border:1px solid red;
+      }
+    }
+  }
+}
+
+.header:before,
+.header:after {
+ content: "";
+ display: table;
+}
+.header:after {
+  clear: both;
+}
+.contain{
+  position: relative;
+  width: $header-width;
+  box-sizing:border-box;
+  .main{
+    float: left;
+    box-sizing:border-box;
+    width: $header-left;
+     padding:$comtain-main-p-tb $comtain-main-p-lr;
+    p{
+      font-size: $font-size-p;
+      padding: 10px 0px;
+      line-height: 2em;
+    }
+    .article{
+      h1{
+        font-size: $font-size-title;
+        font-weight: normal;
+        font-family: Tahoma;
+      }
+    }
+  }
+  .message{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 70%;
+    box-sizing: border-box;
+    width: $header-right;
+    background: $contain-message-bg;
+    ul{
+      list-style: none;
+      padding: $comtain-main-ul-t-p $comtain-main-ul-lr-p $comtain-main-ul-b-p;
+    }
+    li{
+      box-sizing: border-box;
+      padding:$contain-message-li-p-tb 0;
+      height: $contain-message-li-h;
+      border-bottom:1px solid $contain-message-li-b-c;
+    }
+    a{
+      display: block;
+      text-decoration: none;
+    }
+    li a:first-child{
+      color:$font-color-messige-title;
+      font-size: $font-size-messige-title;
+      font-weight: normal;
+      font-family: Tahoma;
+    }
+    li a:nth-child(2){
+      color:$font-color-messige-main;
+      font-size: $font-size-messige-main;
+    }
+  }
+}
+.contain:before,
+.contain:after {
+ content: "";
+ display: table;
+}
+
+.contain:after {
+  clear: both;
+}
+.main-02{
+  background:#bed6c7 url(../images/bamboo.png) no-repeat fixed;
+  background-size:cover;
+  .message{
+    background:none;
+  }
+}
+.adv-message{
+  position:relative;
+  width: $header-width;
+  height: $header-height;
+  background: url(../images/koi.jpg) no-repeat;
+  background-size:cover;
+  background-position:50% 45%;
+  font-size: 4em;
+  text-align: center;
+  color:
+  .adv-contain{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    width: $website-title-content-w;
+    transform:translate(-50%,-50%);
+  }
+}
+
+.footer{
+  position:relative;
+  width: $header-width;
+  height: 10%;
+  min-height: 180px;
+  background:#134347;
+  .footer-contain{
+    position:absolute;
+    top:50%;
+    left: 50%;
+    width: 60%;
+    height: 50%;
+    transform:translate(-50%,-50%);
+    border:1px solid red;
+  }
+}
