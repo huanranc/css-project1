@@ -278,7 +278,6 @@ p{
 .footer {
   position: relative;
   width: $header-width;
-  width: $header-width;
   height: $footer-height;
   min-height: $footer-height-min;
   background: $footer-bg;
@@ -286,8 +285,6 @@ p{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: $footer-contain-w;
-    height:$footer-contain-h;
     font-size: $footer-font-size;
     color:$footer-color;
     letter-spacing: $footer-spacing;
@@ -314,4 +311,5 @@ abbr{
     font-size:3em;
     letter-spacing:1em;
   }
+
 }
