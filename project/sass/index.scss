@@ -20,16 +20,16 @@ p{
   background-size: auto, auto, cover;
   .website-decorate {
     width: $header-width;
-    height: 3%;
-    background: #255251;
-    border-bottom: 3px solid #0e4144;
+    height: $website-decorate-h;
+    background: $website-decorate-bg;
+    border-bottom: $website-decorate-border-w solid $website-decorate-border-c;
   }
   .website-title {
     position: relative;
     float: left;
     box-sizing: border-box;
     width: $header-left;
-    height: 97%;
+    height: $website-title-w;
     .website-title-content {
       position: absolute;
       top: 50%;
@@ -38,8 +38,8 @@ p{
       transform: translate(-50%, -50%);
       img {
         float: left;
-        max-width: 20%;
-        max-height: 20%;
+        max-width: $logo-size;
+        max-height: $logo-size;
         margin: 20px auto;
       }
       .website-title-t {
@@ -50,15 +50,16 @@ p{
         h1 {
           padding: 0;
           margin: 0;
-          font-size: 5em;
-          font-weight: 200;
-          color: #fff;
+          font-size: $website-title-t-h;
+          font-weight: $website-title-t-weight;
+          color: $website-title-t-color;
+          font-family: YouYuan;
         }
         p {
           padding: 0;
           margin: 0;
-          font-size: 3em;
-          color: #93b7ac;
+          font-size: $website-title-t-p-size;
+          color: $website-title-t-p-color;
         }
       }
     }
@@ -83,9 +84,9 @@ p{
         float: left;
         height: $height;
         width: $link--lf-w;
-        font-size: 4em;
+        font-size: 5em;
+        color:$link-color;
         text-align: center;
-        color: #e4eee8;
         box-sizing: border-box;
       }
       .link-02 {
@@ -93,20 +94,27 @@ p{
         height: $height;
         line-height: 60px;
         width: $link-m-w;
-        font-size: 2.5em;
+        color: $link-color;
+        font-size: 2em;
         text-align: center;
         text-decoration: none;
-        color: #e4eee8;
         box-sizing: border-box;
       }
       .link-03 {
         float: left;
         height: $height;
         width: $link--lf-w;
-        font-size: 4em;
+        color: $link-color;
+        font-size: 5em;
         text-align: center;
-        color: #e4eee8;
         box-sizing: border-box;
+      }
+      a{
+        background:$website-link-bg;
+        margin:1px;
+        &:hover{
+          background:$link-hover-bg;
+        }
       }
     }
   }
@@ -116,9 +124,9 @@ p{
   content: "";
   position: absolute;
   top: 13px;
-  width: 100%;
-  height: 3px;
-  background: #336867;
+  width: $header-width;
+  height: $website-decorate-before-h;
+  background: $website-decorate-before;
   opacity: 0.4;
 }
 
@@ -135,7 +143,7 @@ p{
   position: relative;
   width: $header-width;
   box-sizing: border-box;
-  color:#3f5050;
+  color:$contain-color;
   .main {
     float: left;
     box-sizing: border-box;
@@ -146,11 +154,26 @@ p{
       padding: 10px 0px;
       line-height: 2em;
     }
+    span{
+      color: $contain-span-color;
+      &:hover{
+        background:$contain-span-hover-bg;
+        color:$contain-span-hover-color;
+        padding:5px;
+      }
+    }
     .article {
       h1 {
         font-size: $font-size-title;
         font-weight:400;
         font-family: Arial;
+      }
+      .special-text{
+        color:$specila-color;
+        text-decoration: none;
+        &:hover{
+          text-decoration: underline;
+        } 
       }
     }
   }
@@ -175,11 +198,14 @@ p{
     a {
       display: block;
       text-decoration: none;
+      span{
+        color:$contain-message-a-span-c;
+      }
     }
     li a:first-child {
       color: $font-color-messige-title;
       font-size: $font-size-messige-title;
-      font-weight: normal;
+      font-weight: 200;
       font-family: Tahoma;
     }
     li a:nth-child(2) {
@@ -200,12 +226,26 @@ p{
 }
 
 .main-02 {
-  background:url(../images/contours-opaque.png), url(../images/gridlines.png),url(../images/bamboo.png) no-repeat fixed;
-  background-color: #c4ddcf;
+  background:url(../images/contours-opaque.png), url(../images/gridlines.png),url(../images/bamboo.png) ;
+  background-attachment:scroll,scroll,fixed;
+  background-color:rgb(188,213,198);
   background-size: auto, auto, cover;
+  background-repeat:repeat,repeat,no-repeat;
   .message {
-    background: #b1cebd;
-    opacity: 0.4;
+    font-weight: 200;
+    background: rgba(175,203,187,0.5);
+    li{
+       border-bottom: 1px solid #a0b9ad;
+    }
+    li a:first-child {
+      color: #1a5952;
+      font-size: $font-size-messige-title;
+      font-weight: 200;
+      font-family: Tahoma;
+    }
+    li a:hover{
+      color:#49968e;
+    }
   }
 }
 
@@ -213,11 +253,12 @@ p{
   position: relative;
   width: $header-width;
   height: $header-height;
-  font-size: 3.5em;
+  font-size: $dav-meassage-size;
   text-align: center;
-  color:#7a9d98;
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png),url(../images/koi.jpg) no-repeat 50% 45%;
-  background-size: auto auto cover;
+  color:$adv-meassage-color;
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png),url(../images/koi.jpg) 50% 45%;
+  background-size: auto, auto, cover;
+  background-repeat:repeat,repeat,no-repeat;
   .adv-contain {
     position: absolute;
     top: 50%;
@@ -225,7 +266,7 @@ p{
     width: $website-title-content-w;
     transform: translate(-50%, -50%);
     a{
-      color:#c3cfcf;
+      color:$adv-meassage-a-color;
       text-decoration: none;
       &:hover{
         text-decoration: underline;
@@ -237,18 +278,19 @@ p{
 .footer {
   position: relative;
   width: $header-width;
-  height: 10%;
-  min-height: 180px;
-  background: #134347;
+  width: $header-width;
+  height: $footer-height;
+  min-height: $footer-height-min;
+  background: $footer-bg;
   .footer-contain {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 60%;
-    height: 50%;
-    font-size: 8em;
-    color:#89a1a3;
-    letter-spacing: 38px;
+    width: $footer-contain-w;
+    height:$footer-contain-h;
+    font-size: $footer-font-size;
+    color:$footer-color;
+    letter-spacing: $footer-spacing;
     transform: translate(-50%, -50%);
   }
 }

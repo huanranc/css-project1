@@ -5,15 +5,41 @@ $header-left:65%;
 $header-right:35%;
 
 $height:100%;
-$website-title-content-w:80%;
+
+$website-decorate-h:3%;
+$website-decorate-bg:#255251;
+$website-decorate-before:#336867;
+$website-decorate-before-h:3px;
+
+$website-decorate-border-w:3px;
+$website-decorate-border-c:#0e4144;
+
+$website-title-w:97%;
+$website-title-content-w:70%;
 $website-link-content-w:80%;
 $website-link-content-h:20%;
+$website-link-bg:#668f8f;
+
+$website-title-t-h:5em;
+$website-title-t-weight:100;
+$website-title-t-color:#ffffff;
+$website-title-t-p-color:#93b7ac;
+$website-title-t-p-size:3em;
+
+$logo-size:16%;
 
 $link--lf-w:15%;
 $link-m-w:65%;
+$link-color:#000;
+$link-hover-bg:#ffffff;
 
+$contain-color:#3f5050;
 $comtain-main-p-tb:3%;
 $comtain-main-p-lr:8%;
+
+$contain-span-color:#a9b995;
+$contain-span-hover-bg:#3d8a9f;
+$contain-span-hover-color:#ffffff;
 
 $comtain-main-ul-t-p:5%;
 $comtain-main-ul-b-p:10%;
@@ -23,11 +49,27 @@ $contain-message-bg:#e4eee8;
 $contain-message-li-h:9em;
 $contain-message-li-b-c:#d9e3dc;
 $contain-message-li-p-tb:10%;
+$contain-message-a-span-c:#c0cac3;
 
 $font-size-p:2em;
 $font-size-title:2.8em;
 
+$dav-meassage-size:3.5em;
+$adv-meassage-color:#7a9d98;
+$adv-meassage-a-color:#c3cfcf;
+
 $font-size-messige-title:2em;
-$font-size-messige-main:1.5em;
-$font-color-messige-title:#6e8182;
-$font-color-messige-main:#646c5a;
+$font-size-messige-main:1.8em;
+$font-color-messige-title:#9baaa9;
+$font-color-messige-main:#8e9588;
+
+$footer-height:10%;
+$footer-height-min:180px;
+$footer-bg:#134347;
+$footer-contain-w:50%;
+$footer-contain-h:50%;
+$footer-color:#89a1a3;
+$footer-spacing:50px;
+$footer-font-size:8em;
+
+$specila-color:#0d99c1;

@@ -31,12 +31,12 @@ p {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: 80%;
+      width: 70%;
       transform: translate(-50%, -50%); }
       .header .website-title .website-title-content img {
         float: left;
-        max-width: 20%;
-        max-height: 20%;
+        max-width: 16%;
+        max-height: 16%;
         margin: 20px auto; }
       .header .website-title .website-title-content .website-title-t {
         float: left;
@@ -47,8 +47,9 @@ p {
           padding: 0;
           margin: 0;
           font-size: 5em;
-          font-weight: 200;
-          color: #fff; }
+          font-weight: 100;
+          color: #ffffff;
+          font-family: YouYuan; }
         .header .website-title .website-title-content .website-title-t p {
           padding: 0;
           margin: 0;
@@ -74,28 +75,33 @@ p {
         float: left;
         height: 100%;
         width: 15%;
-        font-size: 4em;
+        font-size: 5em;
+        color: #000;
         text-align: center;
-        color: #e4eee8;
         box-sizing: border-box; }
       .header .website-link .website-link-content .link-02 {
         float: left;
         height: 100%;
         line-height: 60px;
         width: 65%;
-        font-size: 2.5em;
+        color: #000;
+        font-size: 2em;
         text-align: center;
         text-decoration: none;
-        color: #e4eee8;
         box-sizing: border-box; }
       .header .website-link .website-link-content .link-03 {
         float: left;
         height: 100%;
         width: 15%;
-        font-size: 4em;
+        color: #000;
+        font-size: 5em;
         text-align: center;
-        color: #e4eee8;
         box-sizing: border-box; }
+      .header .website-link .website-link-content a {
+        background: #668f8f;
+        margin: 1px; }
+        .header .website-link .website-link-content a:hover {
+          background: #ffffff; }
 
 .header:before {
   content: "";
@@ -127,10 +133,21 @@ p {
       font-size: 2em;
       padding: 10px 0px;
       line-height: 2em; }
+    .contain .main span {
+      color: #a9b995; }
+      .contain .main span:hover {
+        background: #3d8a9f;
+        color: #ffffff;
+        padding: 5px; }
     .contain .main .article h1 {
       font-size: 2.8em;
       font-weight: 400;
       font-family: Arial; }
+    .contain .main .article .special-text {
+      color: #0d99c1;
+      text-decoration: none; }
+      .contain .main .article .special-text:hover {
+        text-decoration: underline; }
   .contain .message {
     position: absolute;
     height: 100%;
@@ -150,14 +167,16 @@ p {
     .contain .message a {
       display: block;
       text-decoration: none; }
+      .contain .message a span {
+        color: #c0cac3; }
     .contain .message li a:first-child {
-      color: #6e8182;
+      color: #9baaa9;
       font-size: 2em;
-      font-weight: normal;
+      font-weight: 200;
       font-family: Tahoma; }
     .contain .message li a:nth-child(2) {
-      color: #646c5a;
-      font-size: 1.5em; }
+      color: #8e9588;
+      font-size: 1.8em; }
 
 .contain:before,
 .contain:after {
@@ -168,12 +187,23 @@ p {
   clear: both; }
 
 .main-02 {
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png), url(../images/bamboo.png) no-repeat fixed;
-  background-color: #c4ddcf;
-  background-size: auto, auto, cover; }
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png), url(../images/bamboo.png);
+  background-attachment: scroll,scroll,fixed;
+  background-color: #bcd5c6;
+  background-size: auto, auto, cover;
+  background-repeat: repeat,repeat,no-repeat; }
   .main-02 .message {
-    background: #b1cebd;
-    opacity: 0.4; }
+    font-weight: 200;
+    background: rgba(175, 203, 187, 0.5); }
+    .main-02 .message li {
+      border-bottom: 1px solid #a0b9ad; }
+    .main-02 .message li a:first-child {
+      color: #1a5952;
+      font-size: 2em;
+      font-weight: 200;
+      font-family: Tahoma; }
+    .main-02 .message li a:hover {
+      color: #49968e; }
 
 .adv-message {
   position: relative;
@@ -182,13 +212,14 @@ p {
   font-size: 3.5em;
   text-align: center;
   color: #7a9d98;
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png), url(../images/koi.jpg) no-repeat 50% 45%;
-  background-size: auto auto cover; }
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png), url(../images/koi.jpg) 50% 45%;
+  background-size: auto, auto, cover;
+  background-repeat: repeat,repeat,no-repeat; }
   .adv-message .adv-contain {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 80%;
+    width: 70%;
     transform: translate(-50%, -50%); }
     .adv-message .adv-contain a {
       color: #c3cfcf;
@@ -199,6 +230,7 @@ p {
 .footer {
   position: relative;
   width: 100%;
+  width: 100%;
   height: 10%;
   min-height: 180px;
   background: #134347; }
@@ -206,11 +238,11 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 60%;
+    width: 50%;
     height: 50%;
     font-size: 8em;
     color: #89a1a3;
-    letter-spacing: 38px;
+    letter-spacing: 50px;
     transform: translate(-50%, -50%); }
 
 .txt-decorate {
