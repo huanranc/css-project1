@@ -226,7 +226,7 @@ p{
 }
 
 .main-02 {
-  background:url(../images/contours-opaque.png), url(../images/gridlines.png),url(../images/bamboo.png) ;
+  background:url(../images/contours-opaque.png), url(../images/gridlines.png)  -2% 0,url(../images/bamboo.png) ;
   background-attachment:scroll,scroll,fixed;
   background-color:rgb(188,213,198);
   background-size: auto, auto, cover;
@@ -301,4 +301,17 @@ p{
 
 abbr{
   text-transform: uppercase;
+}
+
+@media screen and (max-width:996px){
+  .header .website-title,.contain .main{
+    width: 100%;
+  }
+  .header .website-link,.contain .message{
+   display: none;
+  }
+  .footer .footer-contain{
+    font-size:3em;
+    letter-spacing:1em;
+  }
 }

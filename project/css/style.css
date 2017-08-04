@@ -187,7 +187,7 @@ p {
   clear: both; }
 
 .main-02 {
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png), url(../images/bamboo.png);
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/bamboo.png);
   background-attachment: scroll,scroll,fixed;
   background-color: #bcd5c6;
   background-size: auto, auto, cover;
@@ -212,7 +212,7 @@ p {
   font-size: 3.5em;
   text-align: center;
   color: #7a9d98;
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png), url(../images/koi.jpg) 50% 45%;
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/koi.jpg) 50% 45%;
   background-size: auto, auto, cover;
   background-repeat: repeat,repeat,no-repeat; }
   .adv-message .adv-contain {
@@ -240,9 +240,9 @@ p {
     left: 50%;
     width: 50%;
     height: 50%;
-    font-size: 8em;
+    font-size: 6em;
     color: #89a1a3;
-    letter-spacing: 50px;
+    letter-spacing: 1em;
     transform: translate(-50%, -50%); }
 
 .txt-decorate {
@@ -250,3 +250,12 @@ p {
 
 abbr {
   text-transform: uppercase; }
+
+@media screen and (max-width: 996px) {
+  .header .website-title, .contain .main {
+    width: 100%; }
+  .header .website-link, .contain .message {
+    display: none; }
+  .footer .footer-contain {
+    font-size: 3em;
+    letter-spacing: 1em; } }
