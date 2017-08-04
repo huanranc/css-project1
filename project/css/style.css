@@ -14,7 +14,7 @@ p {
   box-sizing: border-box;
   width: 100%;
   height: 310px;
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png), url(../images/huntington.jpg) 8% 40%;
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/huntington.jpg) 8% 40%;
   background-size: auto, auto, cover; }
   .header .website-decorate {
     width: 100%;

@@ -16,7 +16,7 @@ p{
   box-sizing: border-box;
   width: $header-width;
   height: $header-height;
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png), url(../images/huntington.jpg) 8% 40%;
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/huntington.jpg) 8% 40%;
   background-size: auto, auto, cover;
   .website-decorate {
     width: $header-width;
@@ -256,7 +256,7 @@ p{
   font-size: $dav-meassage-size;
   text-align: center;
   color:$adv-meassage-color;
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png),url(../images/koi.jpg) 50% 45%;
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0,url(../images/koi.jpg) 50% 45%;
   background-size: auto, auto, cover;
   background-repeat:repeat,repeat,no-repeat;
   .adv-contain {
