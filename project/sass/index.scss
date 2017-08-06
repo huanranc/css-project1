@@ -160,7 +160,7 @@ ul {
       }
     }
     section {
-      padding: 5%;
+      padding: 5% 0;
     }
     article {
       padding: 0 $comtain-main-p-lr;
@@ -230,8 +230,8 @@ ul {
   .aside-02 {
     box-sizing: border-box;
     ul{
-    padding-top: 28%;
-    padding-bottom: 84.6%;
+    padding-top: 20%;
+    padding-bottom: 92.5%;
     }
     li{
       padding: 2em 0;
@@ -280,9 +280,19 @@ ul {
     }
   }
   .adv-icon {
+    position: relative;
     height: $footer-height;
     min-height: $footer-height-min;
     background: $footer-bg;
+    .footer-contain {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: $footer-font-size;
+      color:$footer-color;
+      letter-spacing: $footer-spacing;
+      transform: translate(-50%, -50%);
+   }
   }
 }
 

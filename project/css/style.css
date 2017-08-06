@@ -135,7 +135,7 @@ ul {
         color: #ffffff;
         padding: 5px; }
     .main .content section {
-      padding: 5%; }
+      padding: 5% 0; }
     .main .content article {
       padding: 0 8%; }
       .main .content article h1 {
@@ -163,7 +163,7 @@ ul {
   width: 35%;
   box-sizing: border-box; }
   .aside ul {
-    padding: 5% 15% 43.2%; }
+    padding: 5% 15% 34.8%; }
   .aside li {
     box-sizing: border-box;
     padding: 10% 0;
@@ -189,8 +189,8 @@ ul {
   .aside .aside-02 {
     box-sizing: border-box; }
     .aside .aside-02 ul {
-      padding-top: 28%;
-      padding-bottom: 84.6%; }
+      padding-top: 20%;
+      padding-bottom: 92.5%; }
     .aside .aside-02 li {
       padding: 2em 0;
       height: 5em;
@@ -229,9 +229,18 @@ ul {
         .footer .adv-message .adv-contain a:hover {
           text-decoration: underline; }
   .footer .adv-icon {
+    position: relative;
     height: 10%;
     min-height: 180px;
     background: #134347; }
+    .footer .adv-icon .footer-contain {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 6em;
+      color: #89a1a3;
+      letter-spacing: 0.5em;
+      transform: translate(-50%, -50%); }
 
 .main-02 {
   width: 100%;
