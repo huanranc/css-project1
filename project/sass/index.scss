@@ -5,10 +5,15 @@ body {
   font-family: Times New Roman;
 }
 
-p{
+h1,
+p,
+ul {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
 }
 
 .header {
@@ -29,7 +34,7 @@ p{
     float: left;
     box-sizing: border-box;
     width: $header-left;
-    height: $website-title-w;
+    height: $website-title-h;
     .website-title-content {
       position: absolute;
       top: 50%;
@@ -40,12 +45,12 @@ p{
         float: left;
         max-width: $logo-size;
         max-height: $logo-size;
-        margin: 20px auto;
+        margin: 12% auto;
       }
       .website-title-t {
         float: left;
         width: 70%;
-        margin: 35px auto;
+        margin: 15% auto;
         padding-left: 3em;
         h1 {
           padding: 0;
@@ -53,7 +58,6 @@ p{
           font-size: $website-title-t-h;
           font-weight: $website-title-t-weight;
           color: $website-title-t-color;
-          font-family: YouYuan;
         }
         p {
           padding: 0;
@@ -69,54 +73,50 @@ p{
     float: left;
     box-sizing: border-box;
     width: $header-right;
+    height: $website-title-h;
+    background: rgba(21, 89, 82, 0.2);
+  }
+  .txt-link {
+    width: 58%;
+    text-align: center;
+    a {
+      font-size: 2em;
+      height: auto;
+      margin: 1em auto;
+    }
+  }
+  ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: $website-link-content-w;
+    height: $website-link-content-h;
+    box-sizing: border-box;
+    transform: translate(-50%, -50%);
+  }
+  li {
+    float: left;
+    box-sizing: border-box;
+    padding: 0.5em 0 0 0;
+    margin: 0 1px;
+    width: 20%;
     height: $height;
-    background: #124244;
-    opacity: 0.2;
-    .website-link-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: $website-link-content-w;
-      height: $website-link-content-h;
-      box-sizing: border-box;
-      transform: translate(-50%, -50%);
-      .link-01 {
-        float: left;
-        height: $height;
-        width: $link--lf-w;
-        font-size: 5em;
-        color:$link-color;
-        text-align: center;
-        box-sizing: border-box;
-      }
-      .link-02 {
-        float: left;
-        height: $height;
-        line-height: 60px;
-        width: $link-m-w;
-        color: $link-color;
-        font-size: 2em;
-        text-align: center;
-        text-decoration: none;
-        box-sizing: border-box;
-      }
-      .link-03 {
-        float: left;
-        height: $height;
-        width: $link--lf-w;
-        color: $link-color;
-        font-size: 5em;
-        text-align: center;
-        box-sizing: border-box;
-      }
-      a{
-        background:$website-link-bg;
-        margin:1px;
-        &:hover{
-          background:$link-hover-bg;
-        }
+    background: rgba(255, 255, 255, 0.1);
+    &:hover {
+      background: rgba(255, 255, 255, 0.3);
+      a {
+        color: #fff;
       }
     }
+  }
+  a {
+    float: left;
+    display: block;
+    width: 100%;
+    color: #c3d4cf;
+    font-size: 5em;
+    text-align: center;
+    text-decoration: none;
   }
 }
 
@@ -139,45 +139,46 @@ p{
   clear: both;
 }
 
-.contain {
+.main {
   position: relative;
-  width: $header-width;
   box-sizing: border-box;
-  color:$contain-color;
-  .main {
+  .content {
     float: left;
     box-sizing: border-box;
     width: $header-left;
-    padding: $comtain-main-p-tb $comtain-main-p-lr;
     p {
       font-size: $font-size-p;
       padding: 10px 0px;
       line-height: 2em;
     }
-    span{
+    span {
       color: $contain-span-color;
-      &:hover{
-        background:$contain-span-hover-bg;
-        color:$contain-span-hover-color;
-        padding:5px;
+      &:hover {
+        background: $contain-span-hover-bg;
+        color: $contain-span-hover-color;
+        padding: 5px;
       }
     }
-    .article {
+    section {
+      padding: 5%;
+    }
+    article {
+      padding: 0 $comtain-main-p-lr;
       h1 {
         font-size: $font-size-title;
-        font-weight:400;
+        font-weight: 400;
         font-family: Arial;
       }
-      .special-text{
-        color:$specila-color;
+      .special-text {
+        color: $specila-color;
         text-decoration: none;
-        &:hover{
+        &:hover {
           text-decoration: underline;
-        } 
+        }
       }
     }
   }
-  .message {
+  .description {
     position: absolute;
     height: $height;
     top: 0;
@@ -185,149 +186,111 @@ p{
     box-sizing: border-box;
     width: $header-right;
     background: $contain-message-bg;
-    ul {
-      list-style: none;
-      padding: $comtain-main-ul-t-p $comtain-main-ul-lr-p $comtain-main-ul-b-p;
+  }
+}
+
+.aside {
+  position: absolute;
+  top: $header-height;
+  left: $header-left;
+  width: $header-right;
+  box-sizing: border-box;
+  ul {
+    padding: $comtain-main-ul-t-p $comtain-main-ul-lr-p $comtain-main-ul-b-p;
+  }
+  li {
+    box-sizing: border-box;
+    padding: $contain-message-li-p-tb 0;
+    height: $contain-message-li-h;
+    border-bottom: 1px solid $contain-message-li-b-c;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    span {
+      color: $contain-message-a-span-c;
     }
-    li {
-      box-sizing: border-box;
-      padding: $contain-message-li-p-tb 0;
-      height: $contain-message-li-h;
-      border-bottom: 1px solid $contain-message-li-b-c;
+  }
+  li a:first-child {
+    color: $font-color-messige-title;
+    font-size: $font-size-messige-title;
+    font-weight: 200;
+    font-family: Arial;
+  }
+  li a:nth-child(2) {
+    color: $font-color-messige-main;
+    font-size: $font-size-messige-main;
+  }
+  li a:hover {
+    color: #49968e;
+  }
+  .aside-01 {
+    box-sizing: border-box;
+  }
+  .aside-02 {
+    box-sizing: border-box;
+    ul{
+    padding-top: 28%;
+    padding-bottom: 84.6%;
     }
-    a {
-      display: block;
-      text-decoration: none;
-      span{
-        color:$contain-message-a-span-c;
-      }
-    }
-    li a:first-child {
-      color: $font-color-messige-title;
-      font-size: $font-size-messige-title;
-      font-weight: 200;
-      font-family: Tahoma;
-    }
-    li a:nth-child(2) {
-      color: $font-color-messige-main;
-      font-size: $font-size-messige-main;
+    li{
+      padding: 2em 0;
+      height: 5em;
+      border-top: 1px solid #a0b9ad;
+      border-bottom: 1px solid #a0b9ad;
     }
   }
 }
 
-.contain:before,
-.contain:after {
+.main:before,
+.main:after {
   content: "";
   display: table;
 }
 
-.contain:after {
+.main:after {
   clear: both;
 }
 
-.main-02 {
-  background:url(../images/contours-opaque.png), url(../images/gridlines.png)  -2% 0,url(../images/bamboo.png) ;
-  background-attachment:scroll,scroll,fixed;
-  background-color:rgb(188,213,198);
-  background-size: auto, auto, cover;
-  background-repeat:repeat,repeat,no-repeat;
-  .message {
-    font-weight: 200;
-    background: rgba(175,203,187,0.5);
-    li{
-       border-bottom: 1px solid #a0b9ad;
-    }
-    li a:first-child {
-      color: #1a5952;
-      font-size: $font-size-messige-title;
-      font-weight: 200;
-      font-family: Tahoma;
-    }
-    li a:hover{
-      color:#49968e;
-    }
-  }
-}
-
-.adv-message {
-  position: relative;
+.footer {
   width: $header-width;
-  height: $header-height;
-  font-size: $dav-meassage-size;
-  text-align: center;
-  color:$adv-meassage-color;
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0,url(../images/koi.jpg) 50% 45%;
-  background-size: auto, auto, cover;
-  background-repeat:repeat,repeat,no-repeat;
-  .adv-contain {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: $website-title-content-w;
-    transform: translate(-50%, -50%);
-    a{
-      color:$adv-meassage-a-color;
-      text-decoration: none;
-      &:hover{
-        text-decoration: underline;
+  .adv-message {
+    position: relative;
+    width: $header-width;
+    height: $header-height;
+    font-size: $dav-meassage-size;
+    text-align: center;
+    color: $adv-meassage-color;
+    background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/koi.jpg) 50% 45%;
+    background-size: auto, auto, cover;
+    background-repeat: repeat, repeat, no-repeat;
+    .adv-contain {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: $website-title-content-w;
+      transform: translate(-50%, -50%);
+      a {
+        color: $adv-meassage-a-color;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
-}
-
-.footer {
-  position: relative;
-  width: $header-width;
-  height: $footer-height;
-  min-height: $footer-height-min;
-  background: $footer-bg;
-  .footer-contain {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: $footer-font-size;
-    color:$footer-color;
-    letter-spacing: $footer-spacing;
-    transform: translate(-50%, -50%);
+  .adv-icon {
+    height: $footer-height;
+    min-height: $footer-height-min;
+    background: $footer-bg;
   }
 }
 
-.txt-decorate{
-  border-bottom: 3px dotted;
-}
-
-abbr{
-  text-transform: uppercase;
-}
-
-@media screen and (max-width:996px){
-  .header .website-title,.contain .main{
-    width: 100%;
-  }
-  .header .website-link,.contain .main-03{
-   display: none;
-  }
-  .contain .message{
-    width: 100%;
-    height:320px;
-    left: 0;
-    top: 315%;
-    ul{
-      padding:0 1em;
-    }
-    li{
-      display:block;
-      float: left;
-      width: 50%;
-      height: 7em;
-    }
-  }
-  .main-02 .message{
-    top:350%;
-  }
-  .footer .footer-contain{
-    font-size:3em;
-    letter-spacing:1em;
-  }
-
+.main-02 {
+  width: 100%;
+  background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/bamboo.png);
+  background-attachment: scroll, scroll, fixed;
+  background-color: rgba(138, 188, 159, 0.5);
+  background-size: auto, auto, cover;
+  background-repeat: repeat, repeat, no-repeat;
 }
