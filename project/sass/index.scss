@@ -45,13 +45,13 @@ ul {
         float: left;
         max-width: $logo-size;
         max-height: $logo-size;
-        margin: 12% auto;
+        margin: $website-link-content-img auto;
       }
       .website-title-t {
         float: left;
-        width: 70%;
-        margin: 15% auto;
-        padding-left: 3em;
+        width: $website-title-content-w;
+        margin: $website-title-t-m auto;
+        padding-left: $website-title-t-p-l;
         h1 {
           padding: 0;
           margin: 0;
@@ -74,13 +74,13 @@ ul {
     box-sizing: border-box;
     width: $header-right;
     height: $website-title-h;
-    background: rgba(21, 89, 82, 0.2);
+    background: $website-link-bg;
   }
   .txt-link {
-    width: 58%;
+    width: $txt-link-w;
     text-align: center;
     a {
-      font-size: 2em;
+      font-size: $txt-link-size;
       height: auto;
       margin: 1em auto;
     }
@@ -99,22 +99,22 @@ ul {
     box-sizing: border-box;
     padding: 0.5em 0 0 0;
     margin: 0 1px;
-    width: 20%;
+    width: $website-link-w;
     height: $height;
-    background: rgba(255, 255, 255, 0.1);
+    background: $website-link-li-bg;
     &:hover {
-      background: rgba(255, 255, 255, 0.3);
+      background: $website-link-li-bg-hover;
       a {
-        color: #fff;
+        color: $website-link-a-hover;
       }
     }
   }
   a {
     float: left;
     display: block;
-    width: 100%;
-    color: #c3d4cf;
-    font-size: 5em;
+    width: $width;
+    color: $website-link-a;
+    font-size: $website-link-a-size;
     text-align: center;
     text-decoration: none;
   }
@@ -148,22 +148,35 @@ ul {
     width: $header-left;
     p {
       font-size: $font-size-p;
-      padding: 10px 0px;
+      padding: 12px 0px;
       line-height: 2em;
     }
-    span {
+    a {
+      position: relative;
+      display: inline-block;
       color: $contain-span-color;
+      padding: 1px 10px 1px 8px;
+      margin: -1px -10px -1px -8px;
+      text-decoration: none;
+      i{
+        color: #a9b995;
+        background: #d9e1cd;
+        padding: 2px;
+      }
       &:hover {
         background: $contain-span-hover-bg;
         color: $contain-span-hover-color;
-        padding: 5px;
+        i{
+        color: #fff;
+        background: #357d93;
+        }
       }
     }
     section {
-      padding: 5% 0;
+      padding: 8%;
     }
     article {
-      padding: 0 $comtain-main-p-lr;
+      padding: 0 0 0 $comtain-main-p-lr;
       h1 {
         font-size: $font-size-title;
         font-weight: 400;
@@ -187,6 +200,8 @@ ul {
     width: $header-right;
     background: $contain-message-bg;
     ul {
+      box-sizing: border-box;
+      height: $height;
       padding: $comtain-main-ul-t-p $comtain-main-ul-lr-p $comtain-main-ul-b-p;
     }
     li {
@@ -213,19 +228,23 @@ ul {
       font-size: $font-size-messige-main;
     }
     li a:hover {
-      color: #49968e;
+      color: $font-color-messige-title-hover;
+    }
+    .aside-01{
+      box-sizing: border-box;
+      height: $height;
     }
     .aside-02 {
       box-sizing: border-box;
+      height: $height;
       ul {
-        padding-top: 20%;
-        padding-bottom: 92.5%;
+        padding-top: 28%;
       }
       li {
-        padding: 2em 0;
+        padding: 5% 0;
         height: 5em;
-        border-top: 1px solid #a0b9ad;
-        border-bottom: 1px solid #a0b9ad;
+        border-top: 1px solid $contain-message-li-aside-02-b-c;
+        border-bottom: 1px solid $contain-message-li-aside-02-b-c;
       }
     }
   }
@@ -254,24 +273,24 @@ ul {
   li a:first-child {
     color: $font-color-messige-title;
     font-size: $font-size-messige-title;
-    font-weight: 200;
+    font-weight: 100;
     font-family: Arial;
   }
   li a:nth-child(2) {
     color: $font-color-messige-main;
-    font-size: 1.6em;
+    font-size: $font-size-messige-main;
   }
   li a:hover {
-    color: #49968e;
+    color: $font-color-messige-title-hover;
   }
   .aside-01 {
     box-sizing: border-box;
-    background: #edf4f0;
+    background: $aside-01-bg;
   }
   .aside-02 {
     box-sizing: border-box;
     li{
-      border-bottom: 1px solid #a0b9ad;
+      border-bottom: 1px solid $contain-message-li-aside-02-b-c;
     }
   }
 }
@@ -351,19 +370,48 @@ ul {
 }
 
 .main-02,.aside-02 {
-  background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/bamboo.png);
-  background-attachment: scroll, scroll, fixed;
-  background-color: rgba(138, 188, 159, 0.5);
-  background-size: auto, auto, cover;
-  background-repeat: repeat, repeat, no-repeat;
+  background: $main-02-bg;
+  background-attachment: $main-02-bg-attachment;
+  background-color: $main-02-bg-color;
+  background-size: $main-02-bg-size;
+  background-repeat: $main-02-bg-repeat;
 }
 
 @media screen and (max-width: 996px) {
   .header .website-title,
-  .main .content {
-    width: 100%;
+  .main .content,.header .website-link {
+    width: $width;
   }
-  .header .website-link,
+  .header{
+    height: $header-height-996;
+    .website-title .website-title-content{
+      height: $header-height-996;
+      text-align: center;
+      .website-title-t{
+        margin: 10% auto;
+        padding: 0;
+      }
+    }
+   .website-link{
+      height: 6em;
+      background: none;
+      position: absolute;
+      bottom: 0;
+      ul{
+        width: $width;
+        height: 6em;
+      }
+      li{
+        margin: 0;
+        width: 10%;
+        height:6em;
+        background: rgba(255, 255, 255, 0.2);
+       }
+    .txt-link {
+      width: 80%;
+    }
+   }
+  }
   .main .description{
     display: none;
   }
@@ -375,7 +423,7 @@ ul {
     display: block;
   }
   .footer .adv-message{
-    height: 280px;
+    height: $header-height-996;
     .adv-contain{
       width: 95%;
     }

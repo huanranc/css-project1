@@ -91,7 +91,7 @@ ul {
     .header li:hover {
       background: rgba(255, 255, 255, 0.3); }
       .header li:hover a {
-        color: #fff; }
+        color: #ffffff; }
   .header a {
     float: left;
     display: block;
@@ -126,18 +126,29 @@ ul {
     width: 65%; }
     .main .content p {
       font-size: 2em;
-      padding: 10px 0px;
+      padding: 12px 0px;
       line-height: 2em; }
-    .main .content span {
-      color: #a9b995; }
-      .main .content span:hover {
+    .main .content a {
+      position: relative;
+      display: inline-block;
+      color: #a9b995;
+      padding: 1px 10px 1px 8px;
+      margin: -1px -10px -1px -6px;
+      text-decoration: none; }
+      .main .content a i {
+        color: #a9b995;
+        background: #d9e1cd;
+        padding: 2px; }
+      .main .content a:hover {
         background: #3d8a9f;
-        color: #ffffff;
-        padding: 5px; }
+        color: #ffffff; }
+        .main .content a:hover i {
+          color: #fff;
+          background: #357d93; }
     .main .content section {
-      padding: 5% 0; }
+      padding: 8%; }
     .main .content article {
-      padding: 0 8%; }
+      padding: 0 0 0 8%; }
       .main .content article h1 {
         font-size: 2.8em;
         font-weight: 400;
@@ -156,7 +167,9 @@ ul {
     width: 35%;
     background: #e4eee8; }
     .main .description ul {
-      padding: 5% 15% 34.8%; }
+      box-sizing: border-box;
+      height: 100%;
+      padding: 12% 15% 34.8%; }
     .main .description li {
       box-sizing: border-box;
       padding: 10% 0;
@@ -168,22 +181,25 @@ ul {
       .main .description a span {
         color: #c0cac3; }
     .main .description li a:first-child {
-      color: #9baaa9;
+      color: #91a0a1;
       font-size: 2em;
       font-weight: 200;
       font-family: Arial; }
     .main .description li a:nth-child(2) {
       color: #8e9588;
-      font-size: 1.8em; }
+      font-size: 1.6em; }
     .main .description li a:hover {
       color: #49968e; }
+    .main .description .aside-01 {
+      box-sizing: border-box;
+      height: 100%; }
     .main .description .aside-02 {
-      box-sizing: border-box; }
+      box-sizing: border-box;
+      height: 100%; }
       .main .description .aside-02 ul {
-        padding-top: 20%;
-        padding-bottom: 92.5%; }
+        padding-top: 28%; }
       .main .description .aside-02 li {
-        padding: 2em 0;
+        padding: 5% 0;
         height: 5em;
         border-top: 1px solid #a0b9ad;
         border-bottom: 1px solid #a0b9ad; }
@@ -205,9 +221,9 @@ ul {
     .aside a span {
       color: #c0cac3; }
   .aside li a:first-child {
-    color: #9baaa9;
+    color: #91a0a1;
     font-size: 2em;
-    font-weight: 200;
+    font-weight: 100;
     font-family: Arial; }
   .aside li a:nth-child(2) {
     color: #8e9588;
@@ -286,15 +302,37 @@ ul {
 .main-02, .aside-02 {
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/bamboo.png);
   background-attachment: scroll, scroll, fixed;
-  background-color: rgba(138, 188, 159, 0.5);
+  background-color: rgba(138, 188, 159, 0.3);
   background-size: auto, auto, cover;
   background-repeat: repeat, repeat, no-repeat; }
 
 @media screen and (max-width: 996px) {
   .header .website-title,
-  .main .content {
+  .main .content, .header .website-link {
     width: 100%; }
-  .header .website-link,
+  .header {
+    height: 280px; }
+    .header .website-title .website-title-content {
+      height: 280px;
+      text-align: center; }
+      .header .website-title .website-title-content .website-title-t {
+        margin: 10% auto;
+        padding: 0; }
+    .header .website-link {
+      height: 6em;
+      background: none;
+      position: absolute;
+      bottom: 0; }
+      .header .website-link ul {
+        width: 100%;
+        height: 6em; }
+      .header .website-link li {
+        margin: 0;
+        width: 10%;
+        height: 6em;
+        background: rgba(255, 255, 255, 0.2); }
+      .header .website-link .txt-link {
+        width: 80%; }
   .main .description {
     display: none; }
   .footer .footer-contain {
