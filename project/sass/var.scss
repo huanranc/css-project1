@@ -16,7 +16,7 @@ $website-decorate-border-w:3px;
 $website-decorate-border-c:#0e4144;
 
 $website-title-h:96%;
-$website-title-content-w:70%;
+$website-title-content-w:80%;
 $website-link-content-w:95%;
 $website-link-content-h:25%;
 $txt-link-w:58%;
@@ -28,7 +28,7 @@ $website-link-li-bg-hover:rgba(255, 255, 255, 0.3);
 $website-link-a-hover:#ffffff;
 $website-link-a:#c3d4cf;
 $website-link-a-size:5em;
-$website-link-content-img:12%;
+$website-link-content-img:6em;
 $website-title-t-m:15%;
 $website-title-t-p-l:3em;
 $website-title-t-h:5em;
@@ -37,7 +37,7 @@ $website-title-t-color:#ffffff;
 $website-title-t-p-color:#93b7ac;
 $website-title-t-p-size:3em;
 
-$logo-size:20%;
+$logo-size:14.3em;
 
 $link--lf-w:15%;
 $link-m-w:65%;
@@ -52,12 +52,15 @@ $contain-span-color:#a9b995;
 $contain-span-hover-bg:#3d8a9f;
 $contain-span-hover-color:#ffffff;
 
+$section-p:8%;
+$article-color:#4b6565;
+
 $comtain-main-ul-t-p:12%;
 $comtain-main-ul-b-p:34.8%;
 $comtain-main-ul-lr-p:15%;
 
 $contain-message-bg:#e4eee8;
-$contain-message-li-h:9em;
+$contain-message-li-h:8em;
 $contain-message-li-b-c:#d9e3dc;
 $contain-message-li-aside-02-b-c:#a0b9ad;
 $contain-message-li-p-tb:10%;
@@ -82,6 +85,16 @@ $main-02-bg-color:rgba(138, 188, 159, 0.3);
 $main-02-bg-attachment:scroll, scroll, fixed;
 $main-02-bg-size: auto, auto, cover;
 $main-02-bg-repeat: repeat, repeat, no-repeat;
+$main-p-p:0.3em;
+$main-p-line-heigh:1.5em;
+$main-a-p:1px 10px 1px 8px;
+$main-a-m:-1px -10px -1px -8px;
+$main-a-i-color:#a9b995;
+$main-a-i-bg:#d9e1cd;
+$main-a-i-p:2px;
+$main-a-i-color-hover:#ffffff;
+$main-a-i-bg-hover:#357d93;
+$article-h1:0.3em;
 $footer-height:10%;
 $footer-height-min:180px;
 $footer-bg:#134347;
@@ -93,5 +106,21 @@ $footer-font-size:6em;
 
 $specila-color:#0d99c1;
 
+$website-link-content-img-996:4em;
 $header-height-996:280px;
 $footer-width-996:280px;
+$website-link-h-996:6em;
+$website-link-p-t:0.5em;
+$website-link-m-lr:1px;
+$website-title-t-m:10%;
+$website-link-h-li-bg-996:rgba(255, 255, 255, 0.2);
+$website-link-h-li-w:10%;
+$txt-link-w-996: 80%;
+$footer-adv-contain-w:95%;
+$footer-adv-icon-h-996:160px;
+$footer-adv-icon-font-size:4em;
+$footer-adv-icon-letter-spacing:0.5em;
+
+$aside-02-p-t:33%;
+$aside-02-p-tb:6%;
+$aside-02-li-h:6em;
