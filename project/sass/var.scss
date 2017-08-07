@@ -15,8 +15,8 @@ $website-decorate-before-h:3px;
 $website-decorate-border-w:3px;
 $website-decorate-border-c:#0e4144;
 
-$website-title-h:96%;
-$website-title-content-w:80%;
+$header-title-h:100%;
+$header-title-content-w:80%;
 $website-link-content-w:95%;
 $website-link-content-h:25%;
 $txt-link-w:58%;
@@ -29,13 +29,13 @@ $website-link-a-hover:#ffffff;
 $website-link-a:#c3d4cf;
 $website-link-a-size:5em;
 $website-link-content-img:6em;
-$website-title-t-m:15%;
-$website-title-t-p-l:3em;
-$website-title-t-h:5em;
-$website-title-t-weight:100;
-$website-title-t-color:#ffffff;
-$website-title-t-p-color:#93b7ac;
-$website-title-t-p-size:3em;
+$header-title-t-m:15%;
+$header-title-t-p-l:3em;
+$header-title-t-h:5em;
+$header-title-weight:100;
+$header-title-t-color:#ffffff;
+$header-title-t-p-color:#93b7ac;
+$header-title-t-p-size:3em;
 
 $logo-size:14.3em;
 
@@ -101,6 +101,7 @@ $footer-bg:#134347;
 $footer-contain-w:50%;
 $footer-contain-h:50%;
 $footer-color:#89a1a3;
+$footer-bg-hover:#5a7c7f;
 $footer-spacing:0.5em;
 $footer-font-size:6em;
 

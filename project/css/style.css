@@ -4,65 +4,60 @@ body {
   font-family: Times New Roman; }
 
 /*头部*/
-.header {
+.site-header {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 310px;
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/huntington.jpg) 8% 40%;
   background-size: auto, auto, cover;
-  /*头部装饰*/
   /*头部链接*/ }
-  .header .website-decorate {
-    width: 100%;
-    height: 3%;
-    border-bottom: 3px solid #0e4144;
-    background: #255251; }
-  .header .website-title {
+  .site-header .header-title {
     position: relative;
     float: left;
     box-sizing: border-box;
     width: 65%;
-    height: 96%; }
-    .header .website-title .website-title-content {
+    height: 100%; }
+    .site-header .header-title .header-title-content {
       position: absolute;
       top: 50%;
       left: 50%;
       box-sizing: border-box;
       width: 80%;
       height: 100%;
-      transform: translate(-50%, -50%); }
-      .header .website-title .website-title-content img {
+      transform: translate(-50%, -50%);
+      /*logo*/ }
+      .site-header .header-title .header-title-content img {
         float: left;
         max-width: 14.3em;
         max-height: 14.3em;
         margin: 6em auto; }
-      .header .website-title .website-title-content .website-title-t {
+      .site-header .header-title .header-title-content .header-title-t {
         float: left;
-        margin: 10% auto;
+        margin: 15% auto;
         padding-left: 3em; }
-        .header .website-title .website-title-content .website-title-t h1 {
+        .site-header .header-title .header-title-content .header-title-t h1 {
           color: #ffffff;
           font-size: 5em;
           font-weight: 100; }
-        .header .website-title .website-title-content .website-title-t p {
+        .site-header .header-title .header-title-content .header-title-t p {
           color: #93b7ac;
           font-size: 3em; }
-  .header .website-link {
+  .site-header .header-link {
     position: relative;
     float: left;
     box-sizing: border-box;
     width: 35%;
-    height: 96%;
+    height: 100%;
     background: rgba(21, 89, 82, 0.2); }
-  .header .txt-link {
+  .site-header .txt-link {
     width: 58%;
     text-align: center; }
-    .header .txt-link a {
+    .site-header .txt-link a {
       margin: 1em auto;
       height: auto;
       font-size: 2em; }
-  .header ul {
+  .site-header ul {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -70,7 +65,7 @@ body {
     width: 95%;
     height: 25%;
     transform: translate(-50%, -50%); }
-  .header li {
+  .site-header li {
     float: left;
     box-sizing: border-box;
     padding: 0.5em 0 0 0;
@@ -78,11 +73,11 @@ body {
     width: 20%;
     height: 100%;
     background: rgba(255, 255, 255, 0.1); }
-    .header li:hover {
+    .site-header li:hover {
       background: rgba(255, 255, 255, 0.3); }
-      .header li:hover a {
+      .site-header li:hover a {
         color: #ffffff; }
-  .header a {
+  .site-header a {
     float: left;
     display: block;
     width: 100%;
@@ -92,63 +87,72 @@ body {
     text-decoration: none; }
 
 /*头部装饰*/
-.header:before {
+.site-header:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3%;
+  border-bottom: 3px solid #0e4144;
+  background: #255251; }
+
+.site-header:after {
   content: "";
   position: absolute;
   top: 13px;
+  left: 0;
   width: 100%;
   height: 3px;
   background: #336867;
   opacity: 0.4; }
 
 /*主要内容*/
-.main {
+.container {
   position: relative;
   box-sizing: border-box;
   /*侧栏信息*/ }
-  .main .content {
+  .container .content {
     float: left;
     box-sizing: border-box;
     width: 65%; }
-    .main .content p {
+    .container .content p {
       padding: 0.3em 0;
       line-height: 1.5em;
       font-size: 2em; }
-    .main .content a {
+    .container .content a {
       position: relative;
       display: inline-block;
       color: #a9b995;
       padding: 1px 10px 1px 8px;
       margin: -1px -10px -1px -8px;
       text-decoration: none; }
-      .main .content a i {
+      .container .content a i {
         padding: 2px;
         color: #a9b995;
         background: #d9e1cd; }
-      .main .content a:hover {
+      .container .content a:hover {
         color: #ffffff;
         background: #3d8a9f; }
-        .main .content a:hover i {
+        .container .content a:hover i {
           color: #ffffff;
           background: #357d93; }
-    .main .content section {
+    .container .content section {
       padding: 8%; }
-    .main .content article {
+    .container .content article {
       color: #4b6565;
       padding: 0 0 0 8%; }
-      .main .content article h1 {
+      .container .content article h1 {
         padding: 0.3em 0;
         margin: 0.3em 0;
         font-size: 2.8em;
         font-weight: 400;
         font-family: Arial; }
-      .main .content article .special-text {
+      .container .content article .special-text {
         color: #0d99c1;
         text-decoration: none; }
-        .main .content article .special-text:hover {
+        .container .content article .special-text:hover {
           text-decoration: underline;
           background: none; }
-  .main .description {
+  .container .sidebar {
     position: absolute;
     height: 100%;
     top: 0;
@@ -156,121 +160,93 @@ body {
     box-sizing: border-box;
     width: 35%;
     background: #e4eee8; }
-    .main .description ul {
+    .container .sidebar ul {
       box-sizing: border-box;
       padding: 12% 15% 34.8%;
       height: 100%; }
-    .main .description li {
+    .container .sidebar li {
       box-sizing: border-box;
       padding: 10% 0;
       height: 8em;
       border-bottom: 1px solid #d9e3dc; }
-    .main .description a {
+    .container .sidebar a {
       display: block;
       text-decoration: none; }
-      .main .description a span {
+      .container .sidebar a span {
         color: #c0cac3; }
-    .main .description li a:first-child {
+    .container .sidebar li a:first-child {
       color: #91a0a1;
       font-size: 2em;
       font-weight: 200;
       font-family: Arial; }
-    .main .description li a:nth-child(2) {
+    .container .sidebar li a:nth-child(2) {
       color: #8e9588;
       font-size: 1.6em; }
-    .main .description li a:hover {
+    .container .sidebar li a:hover {
       color: #49968e; }
-    .main .description .aside-01 {
+    .container .sidebar .sidebar-main-row-1 {
       box-sizing: border-box;
       height: 100%; }
-      .main .description .aside-01 ul li:last-child {
+      .container .sidebar .sidebar-main-row-1 ul li:last-child {
         border: none; }
-    .main .description .aside-02 {
+    .container .sidebar .sidebar-main-row-2 {
       box-sizing: border-box;
       height: 100%; }
-      .main .description .aside-02 ul {
+      .container .sidebar .sidebar-main-row-2 ul {
         padding-top: 33%; }
-      .main .description .aside-02 li {
+      .container .sidebar .sidebar-main-row-2 li {
         padding: 6% 0;
         height: 6em;
-        border-top: 1px solid #a0b9ad;
         border-bottom: 1px solid #a0b9ad; }
-
-.aside {
-  display: none;
-  box-sizing: border-box; }
-  .aside ul {
-    width: 100%; }
-  .aside li {
-    float: left;
-    width: 50%;
-    padding: 1em 7em;
-    border-bottom: 1px solid #d9e3dc;
-    box-sizing: border-box; }
-  .aside a {
-    display: block;
-    text-decoration: none; }
-    .aside a span {
-      color: #c0cac3; }
-  .aside li a:first-child {
-    color: #91a0a1;
-    font-size: 2em;
-    font-weight: 100;
-    font-family: Arial; }
-  .aside li a:nth-child(2) {
-    color: #8e9588;
-    font-size: 1.6em; }
-  .aside li a:hover {
-    color: #49968e; }
-  .aside .aside-01 {
-    box-sizing: border-box;
-    background: #edf4f0; }
-  .aside .aside-02 {
-    box-sizing: border-box; }
-    .aside .aside-02 li {
-      border-bottom: 1px solid #a0b9ad; }
+      .container .sidebar .sidebar-main-row-2 li:first-child {
+        border-top: 1px solid #a0b9ad; }
 
 /*底部*/
 .footer {
   width: 100%;
   /*底部标签*/ }
-  .footer .adv-message {
+  .footer .footer-message {
     position: relative;
     width: 100%;
     height: 310px;
     font-size: 3.5em;
+    font-style: italic;
     text-align: center;
     color: #7a9d98;
     background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/koi.jpg) 50% 45%;
     background-size: auto, auto, cover;
     background-repeat: repeat, repeat, no-repeat; }
-    .footer .adv-message .adv-contain {
+    .footer .footer-message .footer-message-content {
       position: absolute;
       top: 50%;
       left: 50%;
       width: 80%;
       transform: translate(-50%, -50%); }
-      .footer .adv-message .adv-contain a {
+      .footer .footer-message .footer-message-content a {
         color: #c3cfcf;
         text-decoration: none; }
-        .footer .adv-message .adv-contain a:hover {
+        .footer .footer-message .footer-message-content a:hover {
           text-decoration: underline; }
-  .footer .adv-icon {
+  .footer .footer-icon {
     position: relative;
     height: 10%;
     min-height: 180px;
     background: #134347; }
-    .footer .adv-icon .footer-contain {
+    .footer .footer-icon .footer-icon-content {
       position: absolute;
       top: 50%;
       left: 50%;
       font-size: 6em;
-      color: #89a1a3;
-      letter-spacing: 0.5em;
       transform: translate(-50%, -50%); }
+      .footer .footer-icon .footer-icon-content a {
+        margin: 0 0.5em;
+        color: #89a1a3; }
+        .footer .footer-icon .footer-icon-content a:hover {
+          background: #5a7c7f;
+          color: #134347; }
 
-.main-02,
-.aside-02 {
+.container-row-2,
+.sidebar-main-row-2 {
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/bamboo.png);
   background-attachment: scroll, scroll, fixed;
   background-color: rgba(138, 188, 159, 0.3);
@@ -278,79 +254,70 @@ body {
   background-repeat: repeat, repeat, no-repeat; }
 
 /*清除浮动*/
-.header:after {
+.container:before,
+.container:after {
   content: "";
   display: table; }
 
-.header:after {
+.container:after {
   clear: both; }
 
-.main:before,
-.main:after {
+.sidebar-main-row-1:before,
+.sidebar-main-row-1:after {
   content: "";
   display: table; }
 
-.main:after {
+.sidebar-main-row-1:after {
   clear: both; }
 
-.aside-01:before,
-.aside-01:after {
+.sidebar-main-row-2:before,
+.sidebar-main-row-2:after {
   content: "";
   display: table; }
 
-.aside-01:after {
-  clear: both; }
-
-.aside-02:before,
-.aside-02:after {
-  content: "";
-  display: table; }
-
-.aside-02:after {
+.sidebar-main-row-2:after {
   clear: both; }
 
 @media screen and (max-width: 996px) {
-  .header .website-title,
-  .main .content,
-  .header .website-link {
+  .site-header .header-title,
+  .container .content,
+  .site-header .header-link {
     width: 100%; }
-  .header {
+  .site-header {
     height: 280px; }
-    .header .website-title .website-title-content {
+    .site-header .header-title .header-title-content {
       height: 280px;
       text-align: center; }
-      .header .website-title .website-title-content img {
+      .site-header .header-title .header-title-content img {
         margin: 4em auto; }
-      .header .website-title .website-title-content .website-title-t {
+      .site-header .header-title .header-title-content .header-title-t {
         padding: 0;
         margin: 10% auto; }
-    .header .website-link {
+    .site-header .header-link {
       position: absolute;
       bottom: 0;
       height: 6em;
       background: none; }
-      .header .website-link ul {
+      .site-header .header-link ul {
         width: 100%;
         height: 6em; }
-      .header .website-link li {
+      .site-header .header-link li {
         margin: 0;
         width: 10%;
         height: 6em;
         background: rgba(255, 255, 255, 0.2); }
-      .header .website-link .txt-link {
+      .site-header .header-link .txt-link {
         width: 80%; }
-  .main .content article {
+  .container .content article {
     padding: 0; }
-  .main .description {
+  .container .sidebar {
     display: none; }
-  .aside {
-    display: block; }
-  .footer .adv-message {
+  .footer .footer-message {
     height: 280px; }
-    .footer .adv-message .adv-contain {
+    .footer .footer-message .footer-message-contain {
       width: 95%; }
-  .footer .adv-icon {
+  .footer .footer-icon {
     height: 160px; }
-    .footer .adv-icon .footer-contain {
+    .footer .footer-icon .footer-icon-contain {
       letter-spacing: 0.5em;
       font-size: 4em; } }

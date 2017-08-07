@@ -4,63 +4,57 @@ body {
 }
 
 /*头部*/
-.header {
+.site-header {
   position: relative;
   box-sizing: border-box;
   width: $header-width;
   height: $header-height;
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/huntington.jpg) 8% 40%;
   background-size: auto, auto, cover;
-  /*头部装饰*/
-  .website-decorate {
-    width: $header-width;
-    height: $website-decorate-h;
-    border-bottom: $website-decorate-border-w solid $website-decorate-border-c;
-    background: $website-decorate-bg;
-  }
-  .website-title {
+  .header-title{
     position: relative;
     float: left;
     box-sizing: border-box;
     width: $header-left;
-    height: $website-title-h;
-    .website-title-content {
+    height: $header-title-h;
+    .header-title-content {
       position: absolute;
       top: 50%;
       left: 50%;
       box-sizing: border-box;
-      width: $website-title-content-w;
+      width: $header-title-content-w;
       height: $height;
       transform: translate(-50%, -50%);
+      /*logo*/
       img {
         float: left;
         max-width: $logo-size;
         max-height: $logo-size;
         margin: $website-link-content-img auto;
       }
-      .website-title-t {
+      .header-title-t {
         float: left;
-        margin: $website-title-t-m auto;
-        padding-left: $website-title-t-p-l;
+        margin: $header-title-t-m auto;
+        padding-left: $header-title-t-p-l;
         h1 {
-          color: $website-title-t-color;
-          font-size: $website-title-t-h;
-          font-weight: $website-title-t-weight;
+          color: $header-title-t-color;
+          font-size: $header-title-t-h;
+          font-weight: $header-title-weight;
         }
         p {
-          color: $website-title-t-p-color;
-          font-size: $website-title-t-p-size;
+          color: $header-title-t-p-color;
+          font-size: $header-title-t-p-size;
         }
       }
     }
   }
   /*头部链接*/
-  .website-link {
+  .header-link {
     position: relative;
     float: left;
     box-sizing: border-box;
     width: $header-right;
-    height: $website-title-h;
+    height: $header-title-h;
     background: $website-link-bg;
   }
   .txt-link {
@@ -107,18 +101,26 @@ body {
   }
 }
 /*头部装饰*/
-.header:before {
+.site-header:before {
   content: "";
   position: absolute;
-  top: 13px;
+  width: $header-width;
+  height: $website-decorate-h;
+  border-bottom: $website-decorate-border-w solid $website-decorate-border-c;
+  background: $website-decorate-bg;
+}
+.site-header:after {
+  content: "";
+  position: absolute;
+  top:13px;
+  left: 0;
   width: $header-width;
   height: $website-decorate-before-h;
   background: $website-decorate-before;
   opacity: 0.4;
 }
-
 /*主要内容*/
-.main {
+.container {
   position: relative;
   box-sizing: border-box;
   .content {
@@ -175,7 +177,7 @@ body {
     }
   }
   /*侧栏信息*/
-  .description {
+  .sidebar {
     position: absolute;
     height: $height;
     top: 0;
@@ -214,14 +216,14 @@ body {
     li a:hover {
       color: $font-color-messige-title-hover;
     }
-    .aside-01 {
+    .sidebar-main-row-1 {
       box-sizing: border-box;
       height: $height;
       ul li:last-child {
         border: none;
       }
     }
-    .aside-02 {
+    .sidebar-main-row-2 {
       box-sizing: border-box;
       height: $height;
       ul {
@@ -230,54 +232,11 @@ body {
       li {
         padding: $aside-02-p-tb 0;
         height: $aside-02-li-h;
-        border-top: 1px solid $contain-message-li-aside-02-b-c;
         border-bottom: 1px solid $contain-message-li-aside-02-b-c;
       }
-    }
-  }
-}
-
-.aside {
-  display: none;
-  box-sizing: border-box;
-  ul {
-    width: 100%;
-  }
-  li {
-    float: left;
-    width: 50%;
-    padding: 1em 7em;
-    border-bottom: 1px solid $contain-message-li-b-c;
-    box-sizing: border-box;
-  }
-  a {
-    display: block;
-    text-decoration: none;
-    span {
-      color: $contain-message-a-span-c;
-    }
-  }
-  li a:first-child {
-    color: $font-color-messige-title;
-    font-size: $font-size-messige-title;
-    font-weight: 100;
-    font-family: Arial;
-  }
-  li a:nth-child(2) {
-    color: $font-color-messige-main;
-    font-size: $font-size-messige-main;
-  }
-  li a:hover {
-    color: $font-color-messige-title-hover;
-  }
-  .aside-01 {
-    box-sizing: border-box;
-    background: $aside-01-bg;
-  }
-  .aside-02 {
-    box-sizing: border-box;
-    li {
-      border-bottom: 1px solid $contain-message-li-aside-02-b-c;
+      li:first-child{
+        border-top: 1px solid $contain-message-li-aside-02-b-c;
+      }
     }
   }
 }
@@ -285,21 +244,22 @@ body {
 /*底部*/
 .footer {
   width: $header-width;
-  .adv-message {
+  .footer-message {
     position: relative;
     width: $header-width;
     height: $header-height;
     font-size: $dav-meassage-size;
+    font-style: italic;
     text-align: center;
     color: $adv-meassage-color;
     background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/koi.jpg) 50% 45%;
     background-size: auto, auto, cover;
     background-repeat: repeat, repeat, no-repeat;
-    .adv-contain {
+    .footer-message-content {
       position: absolute;
       top: 50%;
       left: 50%;
-      width: $website-title-content-w;
+      width: $header-title-content-w;
       transform: translate(-50%, -50%);
       a {
         color: $adv-meassage-a-color;
@@ -311,25 +271,31 @@ body {
     }
   }
   /*底部标签*/
-  .adv-icon {
+  .footer-icon {
     position: relative;
     height: $footer-height;
     min-height: $footer-height-min;
     background: $footer-bg;
-    .footer-contain {
+    .footer-icon-content {
       position: absolute;
       top: 50%;
       left: 50%;
       font-size: $footer-font-size;
-      color: $footer-color;
-      letter-spacing: $footer-spacing;
       transform: translate(-50%, -50%);
+      a{
+        margin: 0 0.5em;
+        color: $footer-color;
+        &:hover{
+          background: $footer-bg-hover;
+          color:$footer-bg;
+        }
+      }
     }
   }
 }
 
-.main-02,
-.aside-02 {
+.container-row-2,
+.sidebar-main-row-2 {
   background: $main-02-bg;
   background-attachment: $main-02-bg-attachment;
   background-color: $main-02-bg-color;
@@ -338,62 +304,55 @@ body {
 }
 
 /*清除浮动*/
-.header:after {
+
+.container:before,
+.container:after {
   content: "";
   display: table;
 }
-.header:after {
+.container:after {
   clear: both;
 }
 
-.main:before,
-.main:after {
+.sidebar-main-row-1:before,
+.sidebar-main-row-1:after {
   content: "";
   display: table;
 }
-.main:after {
+.sidebar-main-row-1:after {
   clear: both;
 }
 
-.aside-01:before,
-.aside-01:after {
-  content: "";
-  display: table;
-}
-.aside-01:after {
-  clear: both;
-}
-
-.aside-02:before,
-.aside-02:after {
+.sidebar-main-row-2:before,
+.sidebar-main-row-2:after {
   content: "";
   display: table;
 }
 
-.aside-02:after {
+.sidebar-main-row-2:after {
   clear: both;
 }
 
 @media screen and (max-width: 996px) {
-  .header .website-title,
-  .main .content,
-  .header .website-link {
+  .site-header .header-title,
+  .container .content,
+  .site-header .header-link {
     width: $width;
   }
-  .header {
+  .site-header {
     height: $header-height-996;
-    .website-title .website-title-content {
+    .header-title .header-title-content {
       height: $header-height-996;
       text-align: center;
       img{
         margin: $website-link-content-img-996 auto;
       }
-      .website-title-t {
+      .header-title-t {
         padding: 0;
         margin: $website-title-t-m auto;
       }
     }
-    .website-link {
+    .header-link {
       position: absolute;
       bottom: 0;
       height: $website-link-h-996;
@@ -413,24 +372,21 @@ body {
       }
     }
   }
-  .main .content article {
+  .container .content article {
     padding: 0;
   }
-  .main .description {
+  .container .sidebar {
     display: none;
   }
-  .aside {
-    display: block;
-  }
-  .footer .adv-message {
+  .footer .footer-message {
     height: $header-height-996;
-    .adv-contain {
+    .footer-message-contain {
       width: $footer-adv-contain-w;
     }
   }
-  .footer .adv-icon {
+  .footer .footer-icon {
     height: $footer-adv-icon-h-996;
-    .footer-contain {
+    .footer-icon-contain {
       letter-spacing: $footer-adv-icon-letter-spacing;
       font-size: $footer-adv-icon-font-size;
     }
