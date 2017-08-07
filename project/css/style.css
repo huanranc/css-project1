@@ -11,20 +11,14 @@ body {
   height: 310px;
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/huntington.jpg) 8% 40%;
   background-size: auto, auto, cover;
-  /*头部装饰*/
   /*头部链接*/ }
-  .header .website-decorate {
-    width: 100%;
-    height: 3%;
-    border-bottom: 3px solid #0e4144;
-    background: #255251; }
-  .header .website-title {
+  .header .header-title {
     position: relative;
     float: left;
     box-sizing: border-box;
     width: 65%;
     height: 96%; }
-    .header .website-title .website-title-content {
+    .header .header-title .header-title-content {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -32,23 +26,23 @@ body {
       width: 80%;
       height: 100%;
       transform: translate(-50%, -50%); }
-      .header .website-title .website-title-content img {
+      .header .header-title .header-title-content img {
         float: left;
         max-width: 14.3em;
         max-height: 14.3em;
         margin: 6em auto; }
-      .header .website-title .website-title-content .website-title-t {
+      .header .header-title .header-title-content .header-title-t {
         float: left;
-        margin: 10% auto;
+        margin: 15% auto;
         padding-left: 3em; }
-        .header .website-title .website-title-content .website-title-t h1 {
+        .header .header-title .header-title-content .header-title-t h1 {
           color: #ffffff;
           font-size: 5em;
           font-weight: 100; }
-        .header .website-title .website-title-content .website-title-t p {
+        .header .header-title .header-title-content .header-title-t p {
           color: #93b7ac;
           font-size: 3em; }
-  .header .website-link {
+  .header .header-link {
     position: relative;
     float: left;
     box-sizing: border-box;
@@ -95,60 +89,69 @@ body {
 .header:before {
   content: "";
   position: absolute;
+  width: 100%;
+  height: 3%;
+  border-bottom: 3px solid #0e4144;
+  background: #255251; }
+
+.header:after {
+  content: "";
+  position: absolute;
   top: 13px;
+  left: 0;
   width: 100%;
   height: 3px;
   background: #336867;
   opacity: 0.4; }
 
 /*主要内容*/
-.main {
+.container {
   position: relative;
   box-sizing: border-box;
   /*侧栏信息*/ }
-  .main .content {
+  .container .content {
     float: left;
     box-sizing: border-box;
     width: 65%; }
-    .main .content p {
+    .container .content p {
       padding: 0.3em 0;
       line-height: 1.5em;
       font-size: 2em; }
-    .main .content a {
+    .container .content a {
       position: relative;
       display: inline-block;
       color: #a9b995;
       padding: 1px 10px 1px 8px;
       margin: -1px -10px -1px -8px;
       text-decoration: none; }
-      .main .content a i {
+      .container .content a i {
         padding: 2px;
         color: #a9b995;
         background: #d9e1cd; }
-      .main .content a:hover {
+      .container .content a:hover {
         color: #ffffff;
         background: #3d8a9f; }
-        .main .content a:hover i {
+        .container .content a:hover i {
           color: #ffffff;
           background: #357d93; }
-    .main .content section {
+    .container .content section {
       padding: 8%; }
-    .main .content article {
+    .container .content article {
       color: #4b6565;
       padding: 0 0 0 8%; }
-      .main .content article h1 {
+      .container .content article h1 {
         padding: 0.3em 0;
         margin: 0.3em 0;
         font-size: 2.8em;
         font-weight: 400;
         font-family: Arial; }
-      .main .content article .special-text {
+      .container .content article .special-text {
         color: #0d99c1;
         text-decoration: none; }
-        .main .content article .special-text:hover {
+        .container .content article .special-text:hover {
           text-decoration: underline;
           background: none; }
-  .main .description {
+  .container .description {
     position: absolute;
     height: 100%;
     top: 0;
@@ -156,41 +159,41 @@ body {
     box-sizing: border-box;
     width: 35%;
     background: #e4eee8; }
-    .main .description ul {
+    .container .description ul {
       box-sizing: border-box;
       padding: 12% 15% 34.8%;
       height: 100%; }
-    .main .description li {
+    .container .description li {
       box-sizing: border-box;
       padding: 10% 0;
       height: 8em;
       border-bottom: 1px solid #d9e3dc; }
-    .main .description a {
+    .container .description a {
       display: block;
       text-decoration: none; }
-      .main .description a span {
+      .container .description a span {
         color: #c0cac3; }
-    .main .description li a:first-child {
+    .container .description li a:first-child {
       color: #91a0a1;
       font-size: 2em;
       font-weight: 200;
       font-family: Arial; }
-    .main .description li a:nth-child(2) {
+    .container .description li a:nth-child(2) {
       color: #8e9588;
       font-size: 1.6em; }
-    .main .description li a:hover {
+    .container .description li a:hover {
       color: #49968e; }
-    .main .description .aside-01 {
+    .container .description .aside-01 {
       box-sizing: border-box;
       height: 100%; }
-      .main .description .aside-01 ul li:last-child {
+      .container .description .aside-01 ul li:last-child {
         border: none; }
-    .main .description .aside-02 {
+    .container .description .aside-02 {
       box-sizing: border-box;
       height: 100%; }
-      .main .description .aside-02 ul {
+      .container .description .aside-02 ul {
         padding-top: 33%; }
-      .main .description .aside-02 li {
+      .container .description .aside-02 li {
         padding: 6% 0;
         height: 6em;
         border-top: 1px solid #a0b9ad;
@@ -269,7 +272,7 @@ body {
       letter-spacing: 0.5em;
       transform: translate(-50%, -50%); }
 
-.main-02,
+.main-row-2,
 .aside-02 {
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/bamboo.png);
   background-attachment: scroll, scroll, fixed;
@@ -278,19 +281,12 @@ body {
   background-repeat: repeat, repeat, no-repeat; }
 
 /*清除浮动*/
-.header:after {
+.container:before,
+.container:after {
   content: "";
   display: table; }
 
-.header:after {
-  clear: both; }
-
-.main:before,
-.main:after {
-  content: "";
-  display: table; }
-
-.main:after {
+.container:after {
   clear: both; }
 
 .aside-01:before,
@@ -311,7 +307,7 @@ body {
 
 @media screen and (max-width: 996px) {
   .header .website-title,
-  .main .content,
+  .container .content,
   .header .website-link {
     width: 100%; }
   .header {
@@ -339,9 +335,9 @@ body {
         background: rgba(255, 255, 255, 0.2); }
       .header .website-link .txt-link {
         width: 80%; }
-  .main .content article {
+  .container .content article {
     padding: 0; }
-  .main .description {
+  .container .description {
     display: none; }
   .aside {
     display: block; }
