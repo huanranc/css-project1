@@ -3,7 +3,9 @@ body {
   font-family: Times New Roman;
 }
 
+
 /*头部*/
+
 .site-header {
   position: relative;
   box-sizing: border-box;
@@ -11,31 +13,28 @@ body {
   height: $header-height;
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/huntington.jpg) 8% 40%;
   background-size: auto, auto, cover;
-  .header-title{
-    position: relative;
-    float: left;
+  .header-title {
+    display: -webkitinline-flex;
+    display: inline-flex;
+    justify-content: center;
     box-sizing: border-box;
     width: $header-left;
     height: $header-title-h;
     .header-title-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
       box-sizing: border-box;
       width: $header-title-content-w;
       height: $height;
-      transform: translate(-50%, -50%);
       /*logo*/
       img {
         float: left;
         max-width: $logo-size;
-        max-height: $logo-size;
-        margin: $website-link-content-img auto;
+        margin-top: 88.5px;
+        margin-left: 10%;
       }
       .header-title-t {
         float: left;
-        margin: $header-title-t-m auto;
-        padding-left: $header-title-t-p-l;
+        margin-top: 98.5px;
+        margin-left: 10px;
         h1 {
           color: $header-title-t-color;
           font-size: $header-title-t-h;
@@ -51,7 +50,7 @@ body {
   /*头部链接*/
   .header-link {
     position: relative;
-    float: left;
+    float: right;
     box-sizing: border-box;
     width: $header-right;
     height: $header-title-h;
@@ -77,6 +76,7 @@ body {
   }
   li {
     float: left;
+    position: relative;
     box-sizing: border-box;
     padding: $website-link-p-t 0 0 0;
     margin: 0 $website-link-m-lr;
@@ -92,15 +92,20 @@ body {
   }
   a {
     float: left;
+    position: relative;
     display: block;
     width: $width;
+    height: $height;
     color: $website-link-a;
     font-size: $website-link-a-size;
     text-align: center;
     text-decoration: none;
   }
 }
+
+
 /*头部装饰*/
+
 .site-header:before {
   content: "";
   position: absolute;
@@ -109,17 +114,21 @@ body {
   border-bottom: $website-decorate-border-w solid $website-decorate-border-c;
   background: $website-decorate-bg;
 }
+
 .site-header:after {
   content: "";
   position: absolute;
-  top:13px;
+  top: 13px;
   left: 0;
   width: $header-width;
   height: $website-decorate-before-h;
   background: $website-decorate-before;
   opacity: 0.4;
 }
+
+
 /*主要内容*/
+
 .container {
   position: relative;
   box-sizing: border-box;
@@ -180,7 +189,6 @@ body {
   .sidebar {
     position: absolute;
     height: $height;
-    top: 0;
     left: $header-left;
     box-sizing: border-box;
     width: $header-right;
@@ -193,7 +201,6 @@ body {
     li {
       box-sizing: border-box;
       padding: $contain-message-li-p-tb 0;
-      height: $contain-message-li-h;
       border-bottom: 1px solid $contain-message-li-b-c;
     }
     a {
@@ -230,18 +237,18 @@ body {
         padding-top: $aside-02-p-t;
       }
       li {
-        padding: $aside-02-p-tb 0;
-        height: $aside-02-li-h;
         border-bottom: 1px solid $contain-message-li-aside-02-b-c;
       }
-      li:first-child{
+      li:first-child {
         border-top: 1px solid $contain-message-li-aside-02-b-c;
       }
     }
   }
 }
 
+
 /*底部*/
+
 .footer {
   width: $header-width;
   .footer-message {
@@ -272,23 +279,36 @@ body {
   }
   /*底部标签*/
   .footer-icon {
-    position: relative;
+    display: -webkit-flex;
+    /* Safari */
+    display: flex;
+    justify-content: center;
     height: $footer-height;
-    min-height: $footer-height-min;
+    height: $footer-height-min;
     background: $footer-bg;
     .footer-icon-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      display: -webkit-flex;
+      /* Safari */
+      display: flex;
+      align-self: center;
       font-size: $footer-font-size;
-      transform: translate(-50%, -50%);
-      a{
-        margin: 0 0.5em;
+      a {
+        margin: 0 1.2em;
         color: $footer-color;
-        &:hover{
-          background: $footer-bg-hover;
-          color:$footer-bg;
+        &:hover {
+          color: $footer-bg;
+          i {
+            background: $footer-bg-hover;
+            border: 3px solid $footer-bg-hover;
+          }
         }
+      }
+      i {
+        padding: 0.3em;
+        width: 0.99em;
+        text-align: center;
+        border-radius: 50%;
+        border: 3px solid $footer-color;
       }
     }
   }
@@ -303,6 +323,7 @@ body {
   background-repeat: $main-02-bg-repeat;
 }
 
+
 /*清除浮动*/
 
 .container:before,
@@ -310,6 +331,7 @@ body {
   content: "";
   display: table;
 }
+
 .container:after {
   clear: both;
 }
@@ -319,6 +341,7 @@ body {
   content: "";
   display: table;
 }
+
 .sidebar-main-row-1:after {
   clear: both;
 }
@@ -333,7 +356,89 @@ body {
   clear: both;
 }
 
-@media screen and (max-width: 996px) {
+ul:before,
+ul:after {
+  content: "";
+  display: table;
+}
+
+ul:after {
+  clear: both;
+}
+
+
+/*变化的时候侧栏在底部*/
+
+@media (min-width:0px) and (max-width: 1200px) {
+  .container .content {
+    height: 80%;
+    article h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  }
+  .container .content article {
+    padding: 0;
+  }
+  .container .sidebar {
+    float: left;
+    position: relative;
+    bottom: 0;
+    width: $width;
+    height: 20%;
+    box-sizing: border-box;
+    left: 0;
+    .sidebar-main-row-1 {
+      ul li:last-child {
+        border-top: 1px solid $contain-message-li-b-c;
+      }
+    }
+    .sidebar-main-row-2 {
+      ul {
+        padding: 0;
+        border: none;
+      }
+      li {
+        border-top: 1px solid $contain-message-li-aside-02-b-c;
+        border-bottom: none;
+      }
+      li:first-child {
+        border-top: 1px solid $contain-message-li-aside-02-b-c;
+      }
+      li:last-child {
+        width: 100%;
+        border-bottom: 1px solid $contain-message-li-aside-02-b-c;
+      }
+    }
+    ul {
+      margin: 0;
+      padding: 0;
+      width: $width;
+      border-bottom: 1px solid $contain-message-li-b-c;
+    }
+    a {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      float: left;
+      padding: 1.5em 8%;
+      width: 50%;
+      border-top: 1px solid $contain-message-li-b-c;
+      border-bottom: none;
+    }
+    li a:first-child {
+      font-size: 1.5em;
+    }
+    li a:nth-child(2) {
+      font-size: 1em;
+    }
+  }
+}
+
+@media (min-width:0px) and (max-width: 547px) {
   .site-header .header-title,
   .container .content,
   .site-header .header-link {
@@ -344,12 +449,23 @@ body {
     .header-title .header-title-content {
       height: $header-height-996;
       text-align: center;
-      img{
-        margin: $website-link-content-img-996 auto;
+      img {
+        float: none;
+        margin-top: 25px;
+        max-width: 75px;
+        margin-left: 0;
       }
       .header-title-t {
+        float: none;
         padding: 0;
-        margin: $website-title-t-m auto;
+        margin-top: 12.5px;
+        margin-left: 10px;
+        h1 {
+          font-size: 3em;
+        }
+        p {
+          font-size: 2.5em;
+        }
       }
     }
     .header-link {
@@ -372,23 +488,166 @@ body {
       }
     }
   }
-  .container .content article {
-    padding: 0;
-  }
   .container .sidebar {
-    display: none;
+    li {
+      width: $width;
+      padding: 1.2em 8%;
+    }
+    li a:first-child {
+      font-size: 1.2em;
+    }
+    li a:nth-child(2) {
+      font-size: 0.8em;
+    }
+  }
+  .container .content {
+    article h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  }
+  .footer .footer-message {
+    height: 300px;
+    font-size: 2.5em;
+    .footer-message-content {
+      width: $footer-adv-contain-w;
+    }
+  }
+  .footer .footer-icon {
+    height: 120px;
+    font-size: 0.6em;
+    .footer-icon-content {
+      font-size: $footer-adv-icon-font-size;
+      a {
+        margin: 0 0.3em;
+      }
+    }
+  }
+}
+
+@media (min-width:547px) and (max-width: 768px) {
+  .site-header .header-title,
+  .container .content,
+  .site-header .header-link {
+    width: $width;
+  }
+  .site-header {
+    height: $header-height-996;
+    .header-title .header-title-content {
+      height: $header-height-996;
+      text-align: center;
+      img {
+        max-width: 83px;
+        margin-top: 63px;
+        margin-left: 15%;
+      }
+      .header-title-t {
+        padding: 0;
+        margin-top: 75.5px;
+        margin-left: 10px;
+        h1 {
+          font-size: 3em;
+        }
+        p {
+          font-size: 2.5em;
+        }
+      }
+    }
+    .header-link {
+      position: absolute;
+      bottom: 0;
+      height: $website-link-h-996;
+      background: none;
+      ul {
+        width: $width;
+        height: $website-link-h-996;
+      }
+      li {
+        margin: 0;
+        width: $website-link-h-li-w;
+        height: $website-link-h-996;
+        background: $website-link-h-li-bg-996;
+      }
+      .txt-link {
+        width: $txt-link-w-996;
+      }
+    }
   }
   .footer .footer-message {
     height: $header-height-996;
-    .footer-message-contain {
+    .footer-message-content {
       width: $footer-adv-contain-w;
     }
   }
   .footer .footer-icon {
     height: $footer-adv-icon-h-996;
-    .footer-icon-contain {
-      letter-spacing: $footer-adv-icon-letter-spacing;
+    font-size: 0.8em;
+    .footer-icon-content {
       font-size: $footer-adv-icon-font-size;
+      a {
+        margin: 0 0.8em;
+      }
+    }
+  }
+}
+
+@media (min-width:768px) and (max-width: 1200px) {
+  .site-header .header-title,
+  .container .content,
+  .site-header .header-link {
+    width: $width;
+  }
+  .site-header {
+    height: $header-height-996;
+    .header-title .header-title-content {
+      height: $header-height-996;
+      text-align: center;
+      img {
+        max-width: 123px;
+        margin-top: 63px;
+        margin-left: 15%;
+      }
+      .header-title-t {
+        padding: 0;
+        margin-top: 75.5px;
+        margin-left: 30px;
+      }
+    }
+    .header-link {
+      position: absolute;
+      bottom: 0;
+      height: $website-link-h-996;
+      background: none;
+      ul {
+        width: $width;
+        height: $website-link-h-996;
+      }
+      li {
+        margin: 0;
+        width: $website-link-h-li-w;
+        height: $website-link-h-996;
+        background: $website-link-h-li-bg-996;
+      }
+      .txt-link {
+        width: $txt-link-w-996;
+      }
+    }
+  }
+  .footer .footer-message {
+    height: $header-height-996;
+    .footer-message-content {
+      width: $footer-adv-contain-w;
+    }
+  }
+  .footer .footer-icon {
+    height: $footer-adv-icon-h-996;
+    .footer-icon-content {
+      font-size: $footer-adv-icon-font-size;
+      a {
+        margin: 0 1em;
+      }
     }
   }
 }
