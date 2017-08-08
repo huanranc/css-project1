@@ -12,30 +12,28 @@ body {
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/huntington.jpg) 8% 40%;
   background-size: auto, auto, cover;
   .header-title{
-    position: relative;
-    float: left;
+    display: -webkitinline-flex;
+    display: inline-flex;
+    justify-content: center;
     box-sizing: border-box;
     width: $header-left;
     height: $header-title-h;
     .header-title-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
       box-sizing: border-box;
       width: $header-title-content-w;
       height: $height;
-      transform: translate(-50%, -50%);
       /*logo*/
       img {
         float: left;
+        display: inline-block;
         max-width: $logo-size;
-        max-height: $logo-size;
-        margin: $website-link-content-img auto;
+        margin-top: 88.5px;
       }
       .header-title-t {
         float: left;
-        margin: $header-title-t-m auto;
-        padding-left: $header-title-t-p-l;
+        display: inline-block;
+        margin-top: 98.5px;
+        margin-left:10px;
         h1 {
           color: $header-title-t-color;
           font-size: $header-title-t-h;
@@ -51,7 +49,7 @@ body {
   /*头部链接*/
   .header-link {
     position: relative;
-    float: left;
+    float: right;
     box-sizing: border-box;
     width: $header-right;
     height: $header-title-h;
@@ -77,6 +75,7 @@ body {
   }
   li {
     float: left;
+    position:relative;
     box-sizing: border-box;
     padding: $website-link-p-t 0 0 0;
     margin: 0 $website-link-m-lr;
@@ -92,8 +91,10 @@ body {
   }
   a {
     float: left;
+    position:relative;
     display: block;
     width: $width;
+    height: $height;
     color: $website-link-a;
     font-size: $website-link-a-size;
     text-align: center;
@@ -193,7 +194,6 @@ body {
     li {
       box-sizing: border-box;
       padding: $contain-message-li-p-tb 0;
-      height: $contain-message-li-h;
       border-bottom: 1px solid $contain-message-li-b-c;
     }
     a {
@@ -230,8 +230,6 @@ body {
         padding-top: $aside-02-p-t;
       }
       li {
-        padding: $aside-02-p-tb 0;
-        height: $aside-02-li-h;
         border-bottom: 1px solid $contain-message-li-aside-02-b-c;
       }
       li:first-child{
@@ -272,16 +270,17 @@ body {
   }
   /*底部标签*/
   .footer-icon {
-    position: relative;
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    justify-content:center;
     height: $footer-height;
     min-height: $footer-height-min;
     background: $footer-bg;
     .footer-icon-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
+      display: -webkit-flex; /* Safari */
+      display: flex;
+       align-self: center;
       font-size: $footer-font-size;
-      transform: translate(-50%, -50%);
       a{
         margin: 0 0.5em;
         color: $footer-color;
@@ -333,7 +332,7 @@ body {
   clear: both;
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1200px) {
   .site-header .header-title,
   .container .content,
   .site-header .header-link {
@@ -385,6 +384,7 @@ body {
     }
   }
   .footer .footer-icon {
+    
     height: $footer-adv-icon-h-996;
     .footer-icon-contain {
       letter-spacing: $footer-adv-icon-letter-spacing;
