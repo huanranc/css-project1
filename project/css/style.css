@@ -293,6 +293,53 @@ ul:after {
 ul:after {
   clear: both; }
 
+@media (min-width: 0px) and (max-width: 547px) {
+  .site-header .header-title,
+  .container .content,
+  .site-header .header-link {
+    width: 100%; }
+  .site-header {
+    height: 280px; }
+    .site-header .header-title .header-title-content {
+      height: 280px;
+      text-align: center; }
+      .site-header .header-title .header-title-content img {
+        margin: 4em auto;
+        max-width: 83px; }
+      .site-header .header-title .header-title-content .header-title-t {
+        padding: 0;
+        margin: 10% auto; }
+    .site-header .header-link {
+      position: absolute;
+      bottom: 0;
+      height: 6em;
+      background: none; }
+      .site-header .header-link ul {
+        width: 100%;
+        height: 6em; }
+      .site-header .header-link li {
+        margin: 0;
+        width: 10%;
+        height: 6em;
+        background: rgba(255, 255, 255, 0.2); }
+      .site-header .header-link .txt-link {
+        width: 80%; }
+  .container .content article {
+    padding: 0; }
+  .container .sidebar {
+    display: none; }
+  .footer .footer-message {
+    height: 280px; }
+    .footer .footer-message .footer-message-content {
+      width: 95%; }
+  .footer .footer-icon {
+    height: 160px;
+    font-size: 0.6em; }
+    .footer .footer-icon .footer-icon-content {
+      font-size: 4em; }
+      .footer .footer-icon .footer-icon-content a {
+        margin: 0 0.3em; } }
+
 /*变化的时候侧栏在底部*/
 @media (min-width: 0px) and (max-width: 1200px) {
   .container .content {

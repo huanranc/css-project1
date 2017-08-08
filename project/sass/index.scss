@@ -5,7 +5,6 @@ body {
 
 
 /*头部*/
-
 .site-header {
   position: relative;
   box-sizing: border-box;
@@ -105,7 +104,6 @@ body {
 
 
 /*头部装饰*/
-
 .site-header:before {
   content: "";
   position: absolute;
@@ -246,7 +244,6 @@ body {
   }
 }
 
-
 /*底部*/
 
 .footer {
@@ -364,6 +361,69 @@ ul:after {
 
 ul:after {
   clear: both;
+}
+@media (min-width:0px) and (max-width: 547px){
+.site-header .header-title,
+  .container .content,
+  .site-header .header-link {
+    width: $width;
+  }
+  .site-header {
+    height: $header-height-996;
+    .header-title .header-title-content {
+      height: $header-height-996;
+      text-align: center;
+      img{
+        margin: $website-link-content-img-996 auto;
+        max-width: 83px;
+      }
+      .header-title-t {
+        padding: 0;
+        margin: $website-title-t-m auto;
+      }
+    }
+    .header-link {
+      position: absolute;
+      bottom: 0;
+      height: $website-link-h-996;
+      background: none;
+      ul {
+        width: $width;
+        height: $website-link-h-996;
+      }
+      li {
+        margin: 0;
+        width: $website-link-h-li-w;
+        height: $website-link-h-996;
+        background: $website-link-h-li-bg-996;
+      }
+      .txt-link {
+        width: $txt-link-w-996;
+      }
+    }
+  }
+  .container .content article {
+    padding: 0;
+  }
+  .container .sidebar {
+    display: none;
+  }
+  .footer .footer-message {
+    height: $header-height-996;
+    .footer-message-content {
+      width: $footer-adv-contain-w;
+    }
+  }
+  .footer .footer-icon {
+    height: $footer-adv-icon-h-996;
+     font-size: 0.6em;
+    .footer-icon-content {
+      font-size: $footer-adv-icon-font-size;
+      a{
+        margin: 0 0.3em;
+      }
+    }
+  }
 }
 
 
