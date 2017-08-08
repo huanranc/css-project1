@@ -25,13 +25,12 @@ body {
       /*logo*/
       img {
         float: left;
-        display: inline-block;
         max-width: $logo-size;
         margin-top: 88.5px;
+        margin-left: 10%;
       }
       .header-title-t {
         float: left;
-        display: inline-block;
         margin-top: 98.5px;
         margin-left:10px;
         h1 {
@@ -279,15 +278,25 @@ body {
     .footer-icon-content {
       display: -webkit-flex; /* Safari */
       display: flex;
-       align-self: center;
+      align-self: center;
       font-size: $footer-font-size;
       a{
-        margin: 0 0.5em;
+        margin: 0 1.2em;
         color: $footer-color;
         &:hover{
-          background: $footer-bg-hover;
           color:$footer-bg;
+          i{
+            background: $footer-bg-hover;
+            border: 3px solid $footer-bg-hover;
+          }
         }
+      }
+      i{
+        padding: 0.3em;
+        width: 0.99em;
+        text-align: center;
+        border-radius: 50%;
+        border: 3px solid $footer-color;
       }
     }
   }
@@ -331,8 +340,71 @@ body {
 .sidebar-main-row-2:after {
   clear: both;
 }
+@media (min-width:0px) and (max-width: 547px){
+.site-header .header-title,
+  .container .content,
+  .site-header .header-link {
+    width: $width;
+  }
+  .site-header {
+    height: $header-height-996;
+    .header-title .header-title-content {
+      height: $header-height-996;
+      text-align: center;
+      img{
+        margin: $website-link-content-img-996 auto;
+        max-width: 83px;
+      }
+      .header-title-t {
+        padding: 0;
+        margin: $website-title-t-m auto;
+      }
+    }
+    .header-link {
+      position: absolute;
+      bottom: 0;
+      height: $website-link-h-996;
+      background: none;
+      ul {
+        width: $width;
+        height: $website-link-h-996;
+      }
+      li {
+        margin: 0;
+        width: $website-link-h-li-w;
+        height: $website-link-h-996;
+        background: $website-link-h-li-bg-996;
+      }
+      .txt-link {
+        width: $txt-link-w-996;
+      }
+    }
+  }
+  .container .content article {
+    padding: 0;
+  }
+  .container .sidebar {
+    display: none;
+  }
+  .footer .footer-message {
+    height: $header-height-996;
+    .footer-message-content {
+      width: $footer-adv-contain-w;
+    }
+  }
+  .footer .footer-icon {
+    height: $footer-adv-icon-h-996;
+     font-size: 0.6em;
+    .footer-icon-content {
+      font-size: $footer-adv-icon-font-size;
+      a{
+        margin: 0 0.3em;
+      }
+    }
+  }
+}
 
-@media screen and (max-width: 1200px) {
+@media (min-width:547px) and (max-width: 768px) {
   .site-header .header-title,
   .container .content,
   .site-header .header-link {
@@ -379,16 +451,83 @@ body {
   }
   .footer .footer-message {
     height: $header-height-996;
-    .footer-message-contain {
+    .footer-message-content {
       width: $footer-adv-contain-w;
     }
   }
   .footer .footer-icon {
-    
+
     height: $footer-adv-icon-h-996;
-    .footer-icon-contain {
-      letter-spacing: $footer-adv-icon-letter-spacing;
+    font-size: 0.8em;
+    .footer-icon-content {
       font-size: $footer-adv-icon-font-size;
+      a{
+        margin: 0 0.8em;
+      }
+    }
+  }
+}
+
+
+@media (min-width:768px) and (max-width: 1200px) {
+  .site-header .header-title,
+  .container .content,
+  .site-header .header-link {
+    width: $width;
+  }
+  .site-header {
+    height: $header-height-996;
+    .header-title .header-title-content {
+      height: $header-height-996;
+      text-align: center;
+      img{
+        margin: $website-link-content-img-996 auto;
+      }
+      .header-title-t {
+        padding: 0;
+        margin: $website-title-t-m auto;
+      }
+    }
+    .header-link {
+      position: absolute;
+      bottom: 0;
+      height: $website-link-h-996;
+      background: none;
+      ul {
+        width: $width;
+        height: $website-link-h-996;
+      }
+      li {
+        margin: 0;
+        width: $website-link-h-li-w;
+        height: $website-link-h-996;
+        background: $website-link-h-li-bg-996;
+      }
+      .txt-link {
+        width: $txt-link-w-996;
+      }
+    }
+  }
+  .container .content article {
+    padding: 0;
+  }
+  .container .sidebar {
+    display: none;
+  }
+  .footer .footer-message {
+    height: $header-height-996;
+    .footer-message-content {
+      width: $footer-adv-contain-w;
+    }
+  }
+  .footer .footer-icon {
+
+    height: $footer-adv-icon-h-996;
+    .footer-icon-content {
+      font-size: $footer-adv-icon-font-size;
+      a{
+        margin: 0 1em;
+      }
     }
   }
 }
