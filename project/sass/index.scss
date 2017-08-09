@@ -59,8 +59,8 @@ body {
     width: $txt-link-w;
     text-align: center;
     a {
-      margin: 1em auto;
-      height: auto;
+      line-height: 77px;
+      text-align: center;
       font-size: $txt-link-size;
       font-family:Times New Roman;
     }
@@ -78,7 +78,6 @@ body {
     float: left;
     position: relative;
     box-sizing: border-box;
-    padding: $website-link-p-t 0 0 0;
     margin: 0 $website-link-m-lr;
     width: $website-link-w;
     height: $height;
@@ -95,11 +94,11 @@ body {
     position: relative;
     display: block;
     width: $width;
-    height: $height;
+    line-height: 77px;
+    text-align: center;
     color: $website-link-a;
     font-size: $website-link-a-size;
     font-family: 'iconfont';
-    text-align: center;
     text-decoration: none;
   }
 }
@@ -367,6 +366,7 @@ ul:after {
 
 /*变化的时候侧栏在底部*/
 
+
 @media (min-width:0px) and (max-width: 1200px) {
   .site-header li{
     padding:0;
@@ -453,7 +453,7 @@ ul:after {
       img {
         float: none;
         margin-top: 25px;
-        max-width: 75px;
+        max-width: 85px;
         margin-left: 0;
       }
       .header-title-t {
@@ -472,20 +472,27 @@ ul:after {
     .header-link {
       position: absolute;
       bottom: 0;
-      height: $website-link-h-996;
+      height: 56px;
       background: none;
       ul {
         width: $width;
-        height: $website-link-h-996;
+        height: 56px;
       }
       li {
         margin: 0;
         width: 20%;
-        height: $website-link-h-996;
+        height: 56px;
         background: $website-link-h-li-bg-996;
       }
       .txt-link {
         width: 60%;
+       a{
+          font-size:1.2em;
+        }
+      }
+      a{
+        line-height: 56px;
+        font-size:2em;
       }
     }
   }
@@ -540,7 +547,7 @@ ul:after {
       height: $header-height-996;
       text-align: center;
       img {
-        max-width: 83px;
+        max-width: 95px;
         margin-top: 63px;
         margin-left: 15%;
       }
@@ -559,21 +566,57 @@ ul:after {
     .header-link {
       position: absolute;
       bottom: 0;
-      height: $website-link-h-996;
+      height: 60px;
       background: none;
       ul {
         width: $width;
-        height: $website-link-h-996;
+        height: 60px;
       }
       li {
         margin: 0;
         width: $website-link-h-li-w;
-        height: $website-link-h-996;
+        height: 60px;
         background: $website-link-h-li-bg-996;
       }
       .txt-link {
         width: $txt-link-w-996;
+        a{
+          font-size:1.6em;
+        }
       }
+      a{
+        line-height: 60px;
+        font-size:3em;
+      }
+    }
+  }
+  .container .sidebar ul{
+    padding: 0 8%;
+    li{
+      width: 45%;
+      padding: 1.5em 0;
+      margin: 0 2%;
+    }
+  }
+  .container .sidebar .sidebar-main-row-2 ul{
+    padding: 0 8%;
+     li {
+      width: $width;
+      margin: 0;
+      text-align: center;
+      border:none;
+      &:first-child{
+        border:none;
+      }
+      &:last-child{
+        border:none;
+      }
+    }
+    li a:first-child {
+      font-size: 1.2em;
+    }
+    li a:nth-child(2) {
+      font-size: 0.8em;
     }
   }
   .footer .footer-message {
@@ -619,11 +662,11 @@ ul:after {
     .header-link {
       position: absolute;
       bottom: 0;
-      height: $website-link-h-996;
+      height: 62px;
       background: none;
       ul {
         width: $width;
-        height: $website-link-h-996;
+        height: 62px;
       }
       li {
         margin: 0;
@@ -633,6 +676,13 @@ ul:after {
       }
       .txt-link {
         width: $txt-link-w-996;
+        a{
+          font-size:1.8em;
+        }
+      }
+      a{
+        line-height: 62px;
+        font-size:4em;
       }
     }
   }
@@ -652,3 +702,4 @@ ul:after {
     }
   }
 }
+
