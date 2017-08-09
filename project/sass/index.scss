@@ -62,6 +62,7 @@ body {
       margin: 1em auto;
       height: auto;
       font-size: $txt-link-size;
+      font-family:Times New Roman;
     }
   }
   ul {
@@ -97,6 +98,7 @@ body {
     height: $height;
     color: $website-link-a;
     font-size: $website-link-a-size;
+    font-family: 'iconfont';
     text-align: center;
     text-decoration: none;
   }
@@ -366,6 +368,9 @@ ul:after {
 /*变化的时候侧栏在底部*/
 
 @media (min-width:0px) and (max-width: 1200px) {
+  .site-header li{
+    padding:0;
+  }
   .container .content {
     height: 80%;
     article h1 {
@@ -475,12 +480,12 @@ ul:after {
       }
       li {
         margin: 0;
-        width: $website-link-h-li-w;
+        width: 20%;
         height: $website-link-h-996;
         background: $website-link-h-li-bg-996;
       }
       .txt-link {
-        width: $txt-link-w-996;
+        width: 60%;
       }
     }
   }
