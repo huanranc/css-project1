@@ -10,10 +10,30 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-htmlhint": "^0.3.1",
     "gulp-sass": "^3.1.0",
+    "gulp-stylelint": "^4.0.0",
     "normalize.css": "^7.0.0"
   },
   "dependencies": {
-    "normalize.css": "^7.0.0"
+    "normalize.css": "^7.0.0",
+    "stylelint-config-sass-guidelines": "^3.1.0"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-sass-guidelines",
+    "rules": {
+      "max-nesting-depth": 4,
+      "selector-max-id": 1,
+      "selector-max-compound-selectors": 4,
+      "selector-no-qualifying-type": [
+        true,
+        {
+          "ignore": [
+            "attribute",
+            "class"
+          ]
+        }
+      ]
+    }
   }
 }

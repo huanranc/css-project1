@@ -1,28 +1,30 @@
+
 body {
-  font-size: 62.5%;
   font-family: Times New Roman;
+  font-size: 62.5%;
 }
 
 
 /*头部*/
 .site-header {
-  position: relative;
   box-sizing: border-box;
-  width: $header-width;
+  position: relative;
   height: $header-height;
+  width: $header-width;
   background: url(../images/contours-opaque.png), url(../images/gridlines.png) -2% 0, url(../images/huntington.jpg) 8% 40%;
   background-size: auto, auto, cover;
   .header-title {
+    box-sizing: border-box;
     display: -webkitinline-flex;
     display: inline-flex;
     justify-content: center;
-    box-sizing: border-box;
-    width: $header-left;
     height: $header-title-h;
-    .header-title-content {
+    width: $header-left;
+  }
+  .header-title-content {
       box-sizing: border-box;
-      width: $header-title-content-w;
       height: $height;
+      width: $header-title-content-w;
       /*logo*/
       img {
         float: left;
@@ -45,14 +47,13 @@ body {
         }
       }
     }
-  }
   /*头部链接*/
   .header-link {
+    box-sizing: border-box;
     position: relative;
     float: right;
-    box-sizing: border-box;
-    width: $header-right;
     height: $header-title-h;
+    width: $header-right;
     background: $website-link-bg;
   }
   .txt-link {
@@ -66,21 +67,21 @@ body {
     }
   }
   ul {
+    box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 50%;
-    box-sizing: border-box;
-    width: $website-link-content-w;
     height: $website-link-content-h;
+    width: $website-link-content-w;
     transform: translate(-50%, -50%);
   }
   li {
+    box-sizing: border-box;
     float: left;
     position: relative;
-    box-sizing: border-box;
     margin: 0 $website-link-m-lr;
-    width: $website-link-w;
     height: $height;
+    width: $website-link-w;
     background: $website-link-li-bg;
     &:hover {
       background: $website-link-li-bg-hover;
@@ -108,8 +109,8 @@ body {
 .site-header:before {
   content: "";
   position: absolute;
-  width: $header-width;
   height: $website-decorate-h;
+  width: $header-width;
   border-bottom: $website-decorate-border-w solid $website-decorate-border-c;
   background: $website-decorate-bg;
 }
@@ -119,8 +120,8 @@ body {
   position: absolute;
   top: 13px;
   left: 0;
-  width: $header-width;
   height: $website-decorate-before-h;
+  width: $header-width;
   background: $website-decorate-before;
   opacity: 0.4;
 }
@@ -186,10 +187,10 @@ body {
   }
   /*侧栏信息*/
   .sidebar {
+    box-sizing: border-box;
     position: absolute;
     height: $height;
     left: $header-left;
-    box-sizing: border-box;
     width: $header-right;
     background: $contain-message-bg;
     ul {
@@ -226,7 +227,7 @@ body {
       box-sizing: border-box;
       height: $height;
       ul li:last-child {
-      border: none;
+        border: none;
       }
     }
     .sidebar-main-row-2 {
@@ -251,8 +252,8 @@ body {
   width: $header-width;
   .footer-message {
     position: relative;
-    width: $header-width;
     height: $header-height;
+    width: $header-width;
     font-size: $dav-meassage-size;
     font-style: italic;
     text-align: center;
@@ -281,7 +282,6 @@ body {
     /* Safari */
     display: flex;
     justify-content: center;
-    height: $footer-height;
     height: $footer-height-min;
     background: $footer-bg;
     .footer-icon-content {
@@ -384,12 +384,12 @@ ul:after {
     padding: 0;
   }
   .container .sidebar {
+    box-sizing: border-box;
     float: left;
     position: relative;
     bottom: 0;
     width: $width;
     height: 20%;
-    box-sizing: border-box;
     left: 0;
     .sidebar-main-row-1 {
       ul li:last-child {
@@ -486,7 +486,7 @@ ul:after {
       }
       .txt-link {
         width: 60%;
-       a{
+        a{
           font-size:1.2em;
         }
       }
@@ -600,7 +600,7 @@ ul:after {
   }
   .container .sidebar .sidebar-main-row-2 ul{
     padding: 0 8%;
-     li {
+    li {
       width: $width;
       margin: 0;
       text-align: center;
